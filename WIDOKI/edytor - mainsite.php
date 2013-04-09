@@ -128,9 +128,18 @@
 		<!-- klasa na top/banner? ew cokolwiek innego -->
 		<div class="row">
 
-			<?php echo $content; ?>
+			
 			
 		</div>
+		<div class="row">
+
+			<?php echo $content; ?>
+		
+		</div>
+		<!-- szczerze powiedziawszy nw co można by tu było dodać -->
+		<footer class="row">
+			
+		</footer>
 	</body>
 
 </html>
