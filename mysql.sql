@@ -48,8 +48,8 @@ CREATE TABLE article_history (
 );
 
 ALTER TABLE article_history
-ADD CONSTRAINT FK_article_status_author
-FOREIGN KEY (author) REFERENCES user(id_user)
+ADD CONSTRAINT FK_article_status_article
+FOREIGN KEY (article) REFERENCES article(id_article)
 ON UPDATE CASCADE
 ON DELETE CASCADE;
 
