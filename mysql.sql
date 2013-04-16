@@ -39,7 +39,7 @@ CREATE TABLE status (
   name VARCHAR(20) NOT NULL UNIQUE,  
 );
 
-CRAETE TABLE article_history (
+CREATE TABLE article_history (
   id_history INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   article INT NOT NULL,
   status INT NOT NULL,
