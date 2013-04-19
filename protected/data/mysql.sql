@@ -12,11 +12,6 @@ CREATE TABLE user (
   firstname VARCHAR(20),
   lastname VARCHAR(20),
   email VARCHAR(100) NOT NULL UNIQUE,
-  isadmin TINYINT(1) NOT NULL,
-  issectioneditor TINYINT(1) NOT NULL,
-  iseditor TINYINT(1) NOT NULL,
-  isreviewer TINYINT(1) NOT NULL,
-  ismanager TINYINT(1) NOT NULL,
   register_date DATE
 );
 

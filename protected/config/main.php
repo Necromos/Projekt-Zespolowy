@@ -59,7 +59,11 @@ return array(
 			'password' => '',
 			'charset' => 'utf8',
 		),
-		
+		// menadżer autoryzacji używający wbudowanej klasy oraz bazy danych
+		'authManager'=>array(
+            'class'=>'CDbAuthManager',
+            'connectionID'=>'db',
+        ),
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',

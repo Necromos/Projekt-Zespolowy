@@ -71,6 +71,19 @@ class SiteController extends Controller
 		}
 		$this->render('contact',array('model'=>$model));
 	}
+	/**
+	 * Display submit/register page
+	 */
+	public function actionSubmit()
+	{
+		$model=new SubmitForm;
+		if(isset($_POST['SubmitForm']))
+		{
+			$model->attributes=$_POST['SubmitForm'];
+
+		}
+		$this->render('submit',array('model'=>$model));
+	}
 
 	/**
 	 * Displays the login page
