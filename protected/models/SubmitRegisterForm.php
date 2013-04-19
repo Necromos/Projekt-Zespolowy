@@ -21,6 +21,10 @@ class SubmitRegisterForm extends CFormModel
 		return array(
 			array('username, email, firstName, lastName, password, password2', 'required'),
 			array('email','email'),
+			array('username', 'length', 'min'=>3, 'max'=>12),
+			array('password, password2', 'length', 'min'=>8, 'max'=>16),
+			array('username','unique', 'className' => 'Users')
+			array('password', 'compare', 'compareAttribute'=>'password2'),
 		);
 	}
 
@@ -32,7 +36,7 @@ class SubmitRegisterForm extends CFormModel
 		return array(
 			'firstName' => 'First Name',
 			'lastName' => 'Last Name',
-			'password2' => 'Repeat password',
+			'password2' => 'Confirm password',
 		);
 	}
 
