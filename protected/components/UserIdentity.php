@@ -19,7 +19,7 @@ class UserIdentity extends CUserIdentity
         {
             $this->_id=$record->id;
             // w sumie nw co mozemy zachowac w sesji jeszcze
-            $this->setState('title', $record->username);
+            $this->setState('name', $record->username);
             $this->errorCode=self::ERROR_NONE;
         }
         return !$this->errorCode;
