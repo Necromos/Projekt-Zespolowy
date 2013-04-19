@@ -74,15 +74,16 @@ class SiteController extends Controller
 	/**
 	 * Display submit/register page
 	 */
-	public function actionSubmit()
+	public function actionSubmitRegister()
 	{
-		$model=new SubmitForm;
-		if(isset($_POST['SubmitForm']))
+		$model=new SubmitRegisterForm;
+		$this->performAjaxValidation($model);
+		if(isset($_POST['SubmitRegisterForm']))
 		{
-			$model->attributes=$_POST['SubmitForm'];
+			$model->attributes=$_POST['SubmitRegisterForm'];
 
 		}
-		$this->render('submit',array('model'=>$model));
+		$this->render('submitRegister',array('model'=>$model));
 	}
 
 	/**
@@ -93,11 +94,7 @@ class SiteController extends Controller
 		$model=new LoginForm;
 
 		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
+		$this->performAjaxValidation($model);
 
 		// collect user input data
 		if(isset($_POST['LoginForm']))
@@ -118,5 +115,14 @@ class SiteController extends Controller
 	{
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
+	}
+
+	protected function performAjaxValidation($model)
+	{
+	    if(isset($_POST['ajax']) && $_POST['ajax']==='user-form')
+	    {
+	        echo CActiveForm::validate($model);
+	        Yii::app()->end();
+	    }
 	}
 }
