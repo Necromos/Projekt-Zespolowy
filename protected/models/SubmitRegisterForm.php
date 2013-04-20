@@ -23,8 +23,9 @@ class SubmitRegisterForm extends CFormModel
 			array('username, email, firstName, lastName, password, password2', 'required'),
 			array('email','email'),
 			array('username', 'length', 'min'=>3, 'max'=>12),
-			array('password, password2', 'length', 'min'=>8, 'max'=>16),
+			array('password', 'length', 'min'=>8, 'max'=>16),
 			array('username','unique', 'className' => 'User'),
+			array('email','unique', 'className' => 'User'),
 			array('password', 'compare', 'compareAttribute'=>'password2'),
 			array('rememberMe', 'boolean'),
 		);
