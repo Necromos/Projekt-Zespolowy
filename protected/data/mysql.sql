@@ -1,16 +1,17 @@
-DROP TABLE user_tag;
-DROP TABLE article_tag;
-DROP TABLE article_history;
-DROP TABLE article;
-DROP TABLE user;
-DROP TABLE status;
-DROP TABLE tag;
+DROP TABLE if exists user_tag;
+DROP TABLE if exists article_tag;
+DROP TABLE if exists article_history;
+DROP TABLE if exists article;
+DROP TABLE if exists user;
+DROP TABLE if exists status;
+DROP TABLE if exists tag;
 
 CREATE TABLE user (
   id_user INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  nick VARCHAR(20) NOT NULL UNIQUE,
-  firstname VARCHAR(20),
-  lastname VARCHAR(20),
+  username VARCHAR(20) NOT NULL UNIQUE,
+  password VARCHAR(50) NOT NULL,
+  firstname VARCHAR(20) NOT NULL,
+  lastname VARCHAR(20) NOT NULL,
   email VARCHAR(100) NOT NULL UNIQUE,
   register_date DATE
 );
