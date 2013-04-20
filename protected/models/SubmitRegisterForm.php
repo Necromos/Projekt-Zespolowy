@@ -8,6 +8,7 @@ class SubmitRegisterForm extends CFormModel
 	public $lastName;
 	public $password;
 	public $password2;
+	public $rememberMe;
 
 	private $_identity;
 
@@ -23,8 +24,9 @@ class SubmitRegisterForm extends CFormModel
 			array('email','email'),
 			array('username', 'length', 'min'=>3, 'max'=>12),
 			array('password, password2', 'length', 'min'=>8, 'max'=>16),
-			array('username','unique', 'className' => 'Users')
+			array('username','unique', 'className' => 'User'),
 			array('password', 'compare', 'compareAttribute'=>'password2'),
+			array('rememberMe', 'boolean'),
 		);
 	}
 
@@ -37,11 +39,30 @@ class SubmitRegisterForm extends CFormModel
 			'firstName' => 'First Name',
 			'lastName' => 'Last Name',
 			'password2' => 'Confirm password',
+			'rememberMe'=>'Remember me next time',
 		);
 	}
 
 	public function submit()
 	{
-		return true;
+    	$record = new User;
+    	$record->username=$this->username;
+    	$record->email=$this->email;
+    	$record->password=md5($this->password);
+    	$record->firstname=$this->firstName;
+    	$record->lastname=$this->lastName;
+    	$record->register_date=date('Y-m-d');
+    	if($record->save())
+    	{
+    		$identity = new UserIdentity($this->username,$this->password);
+    		$identity->authenticate();
+    		if($identity->errorCode===UserIdentity::ERROR_NONE)
+			{
+				$duration=$this->rememberMe ? 3600*24*30 : 0; // 30 days
+				Yii::app()->user->login($identity,$duration);
+	    		return true;
+	    	}
+    	}
+		return false;
 	}
 }

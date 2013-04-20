@@ -61,6 +61,12 @@ $this->breadcrumbs=array(
 		<?php echo $form->error($model,'password2'); ?>
 	</div>
 
+	<div class="row rememberMe">
+		<?php echo $form->checkBox($model,'rememberMe'); ?>
+		<?php echo $form->label($model,'rememberMe'); ?>
+		<?php echo $form->error($model,'rememberMe'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Register/Submit'); ?>
 	</div>

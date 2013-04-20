@@ -81,7 +81,8 @@ class SiteController extends Controller
 		if(isset($_POST['SubmitRegisterForm']))
 		{
 			$model->attributes=$_POST['SubmitRegisterForm'];
-
+			if($model->validate() && $model->submit())
+				$this->redirect(Yii::app()->homeUrl);
 		}
 		$this->render('submitRegister',array('model'=>$model));
 	}
