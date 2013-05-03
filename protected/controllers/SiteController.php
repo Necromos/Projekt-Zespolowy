@@ -86,6 +86,30 @@ class SiteController extends Controller
 		}
 		$this->render('submitRegister',array('model'=>$model));
 	}
+	
+	
+	public function actionSubmitArticle()
+	{
+		$model=new SubmitArticleForm;
+		$this->performAjaxValidation($model);
+		if(isset($_POST['SubmitArticleForm']))
+		{
+			$rnd = rand(0,9999);  // generate random number between 0-9999
+			$uploadedFile=CUploadedFile::getInstance($model,'files');
+            $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
+            $model->files = $fileName;
+
+			$model->attributes=$_POST['SubmitArticleForm'];
+			
+			if($model->save())
+            {	
+				$uploadedFile->saveAs(Yii::app()->basePath.'/../articles/'.$fileName);  // rootDirectory/articles
+   				if($model->validate() && $model->submit())
+					$this->redirect(Yii::app()->homeUrl);
+            }	
+		}
+		$this->render('submitArticle',array('model'=>$model));
+	}
 
 	/**
 	 * Displays the login page
