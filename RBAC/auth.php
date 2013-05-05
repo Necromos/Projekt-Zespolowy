@@ -13,15 +13,13 @@ $role->addChild('submitArticle');
 
 $role=$auth->createRole('reviewer');
 
-
 $role=$auth->createRole('editor');
 $role->addChild('author');
 $role->addChild('reviewer');
 
 $role=$auth->createRole('sectionEditor');
 
+$role=$auth->createRole('managingEditor');
 
-$role=$auth->createRole('manager');
-
-
+$role=$auth->createRole('administrator');
 ?>
