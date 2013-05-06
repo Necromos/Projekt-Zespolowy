@@ -71,24 +71,7 @@ class SiteController extends Controller
 		}
 		$this->render('contact',array('model'=>$model));
 	}
-	/**
-	 * Display submit/register page
-	 */
-	public function actionRegister()
-	{
-		if (!Yii::app()->user->isGuest)
-			$this->redirect(Yii::app()->homeUrl);
-		$model=new RegisterForm;
-		$this->performAjaxValidation($model);
-		if(isset($_POST['RegisterForm']))
-		{
-			$model->attributes=$_POST['RegisterForm'];
-			if($model->validate() && $model->submit())
-				$this->redirect(Yii::app()->homeUrl);
-		}
-		$this->render('register',array('model'=>$model));
-	}
-	
+
 	
 	public function actionSubmitArticle()
 	{
@@ -111,37 +94,6 @@ class SiteController extends Controller
             }	
 		}
 		$this->render('submitArticle',array('model'=>$model));
-	}
-
-	/**
-	 * Displays the login page
-	 */
-	public function actionLogin()
-	{
-		$model=new LoginForm;
-
-		// if it is ajax validation request
-		$this->performAjaxValidation($model);
-
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->homeUrl);
-		}
-		// display the login form
-		$this->render('login',array('model'=>$model));
-	}
-
-	/**
-	 * Logs out the current user and redirect to homepage.
-	 */
-	public function actionLogout()
-	{
-		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
 	}
 
 	protected function performAjaxValidation($model)

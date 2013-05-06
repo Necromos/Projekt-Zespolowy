@@ -658,3 +658,52 @@ Stack trace:
 REQUEST_URI=/informatica/index.php?r=site/submitRegister
 HTTP_REFERER=http://localhost/informatica/index.php?r=site/submitRegister
 ---
+2013/05/06 19:45:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logout".' in C:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('logout')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('logout')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/logout')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\informatica\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/informatica/index.php?r=site/logout
+HTTP_REFERER=http://localhost/informatica/index.php?r=site/submitArticle
+---
+2013/05/06 19:46:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logout".' in C:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('logout')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('logout')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/logout')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\informatica\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/informatica/index.php?r=site/logout
+HTTP_REFERER=http://localhost/informatica/index.php?r=site/page&view=about
+---
+2013/05/06 19:46:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logout".' in C:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('logout')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('logout')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/logout')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\informatica\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/informatica/index.php?r=site/logout
+HTTP_REFERER=http://localhost/informatica/index.php?r=site/page&view=about
+---
+2013/05/06 19:46:58 [error] [exception.CException] exception 'CException' with message 'UserController cannot find the requested view "login".' in C:\xampp\htdocs\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#1 C:\xampp\htdocs\informatica\protected\controllers\UserController.php(61): CController->render('login', Array)
+#2 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): UserController->actionLogin()
+#3 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('login')
+#7 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('user/login')
+#8 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\informatica\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/informatica/index.php?r=user/login
+HTTP_REFERER=http://localhost/informatica/index.php?r=site/index
+---
