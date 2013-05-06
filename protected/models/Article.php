@@ -14,6 +14,7 @@
  * @property User $author0
  * @property ArticleHistory[] $articleHistories
  * @property ArticleTag[] $articleTags
+ * @property Review[] $reviews
  */
 class Article extends CActiveRecord
 {
@@ -46,6 +47,7 @@ class Article extends CActiveRecord
 			array('author, content', 'required'),
 			array('author', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>50),
+			array('content', 'length', 'max'=>100),
 			array('create_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -64,6 +66,7 @@ class Article extends CActiveRecord
 			'author0' => array(self::BELONGS_TO, 'User', 'author'),
 			'articleHistories' => array(self::HAS_MANY, 'ArticleHistory', 'article'),
 			'articleTags' => array(self::HAS_MANY, 'ArticleTag', 'article'),
+			'reviews' => array(self::HAS_MANY, 'Review', 'article'),
 		);
 	}
 
