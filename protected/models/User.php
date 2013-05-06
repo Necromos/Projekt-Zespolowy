@@ -64,7 +64,7 @@ class User extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'articles' => array(self::HAS_MANY, 'Article', 'author'),
-			'userTags' => array(self::HAS_MANY, 'UserTag', 'user'),
+			//'userTags' => array(self::HAS_MANY, 'UserTag', 'user'),
 		);
 	}
 
@@ -106,5 +106,38 @@ class User extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+
+	public function behaviors()
+	{
+		return array(
+			'tags' => array(
+		        'class' => 'ext.yiiext.behaviors.model.taggable.ETaggableBehavior',
+		        // Table where tags are stored
+		        'tagTable' => 'tag',
+		        // Cross-table that stores tag-model connections.
+		        // By default it's your_model_tableTag
+		        'tagBindingTable' => 'user_tag',
+		        // Foreign key in cross-table.
+		        // By default it's your_model_tableId
+		        'modelTableFk' => 'id_user',
+		        // Tag table PK field
+		        'tagTablePk' => 'id_tag',
+		        // Tag name field
+		        'tagTableName' => 'name',
+		        // Tag counter field
+		        // if null (default) does not write tag counts to DB
+		        'tagTableCount' => 'count',
+		        // Tag binding table tag ID
+		        'tagBindingTableTagId' => 'tag',
+		        // Caching component ID. If false don't use cache.
+		        // Defaults to false.
+		        'cacheID' => 'cache',
+		 
+		        // Save nonexisting tags.
+		        // When false, throws exception when saving nonexisting tag.
+		        'createTagsAutomatically' => true,
+	      	)
+		);
 	}
 }

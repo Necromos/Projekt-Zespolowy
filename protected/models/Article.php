@@ -65,7 +65,7 @@ class Article extends CActiveRecord
 		return array(
 			'author0' => array(self::BELONGS_TO, 'User', 'author'),
 			'articleHistories' => array(self::HAS_MANY, 'ArticleHistory', 'article'),
-			'articleTags' => array(self::HAS_MANY, 'ArticleTag', 'article'),
+			//'articleTags' => array(self::HAS_MANY, 'ArticleTag', 'article'),
 			'reviews' => array(self::HAS_MANY, 'Review', 'article'),
 		);
 	}
@@ -104,5 +104,38 @@ class Article extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+
+	public function behaviors()
+	{
+		return array(
+			'tags' => array(
+		        'class' => 'ext.yiiext.behaviors.model.taggable.ETaggableBehavior',
+		        // Table where tags are stored
+		        'tagTable' => 'tag',
+		        // Cross-table that stores tag-model connections.
+		        // By default it's your_model_tableTag
+		        'tagBindingTable' => 'article_tag',
+		        // Foreign key in cross-table.
+		        // By default it's your_model_tableId
+		        'modelTableFk' => 'id_article',
+		        // Tag table PK field
+		        'tagTablePk' => 'id_tag',
+		        // Tag name field
+		        'tagTableName' => 'name',
+		        // Tag counter field
+		        // if null (default) does not write tag counts to DB
+		        'tagTableCount' => 'count',
+		        // Tag binding table tag ID
+		        'tagBindingTableTagId' => 'tag',
+		        // Caching component ID. If false don't use cache.
+		        // Defaults to false.
+		        'cacheID' => 'cache',
+		 
+		        // Save nonexisting tags.
+		        // When false, throws exception when saving nonexisting tag.
+		        'createTagsAutomatically' => true,
+	      	)
+		);
 	}
 }
