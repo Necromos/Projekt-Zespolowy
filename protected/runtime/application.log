@@ -614,3 +614,47 @@ Stack trace:
 REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=site/submitArticle
 HTTP_REFERER=http://localhost/Yii/Projekt-Zespolowy/index.php?r=site/submitArticle
 ---
+2013/05/06 10:31:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "submitRegister".' in C:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('submitRegister')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('submitRegister')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/submitRegi...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\informatica\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/informatica/index.php?r=site/submitRegister
+HTTP_REFERER=http://localhost/informatica/
+---
+2013/05/06 10:31:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "submitRegister".' in C:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('submitRegister')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('submitRegister')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/submitRegi...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\informatica\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/informatica/index.php?r=site/submitRegister
+HTTP_REFERER=http://localhost/informatica/index.php?r=site/submitRegister
+---
+2013/05/06 10:32:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "submitRegister".' in C:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('submitRegister')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('submitRegister')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/submitRegi...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\informatica\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/informatica/index.php?r=site/submitRegister
+HTTP_REFERER=http://localhost/informatica/index.php?r=site/submitRegister
+---
+2013/05/06 10:32:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "submitRegister".' in C:\xampp\htdocs\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(270): CController->missingAction('submitRegister')
+#1 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('submitRegister')
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('site/submitRegi...')
+#3 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\informatica\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/informatica/index.php?r=site/submitRegister
+HTTP_REFERER=http://localhost/informatica/index.php?r=site/submitRegister
+---

@@ -1,6 +1,6 @@
 <?php
 
-class SubmitRegisterForm extends CFormModel
+class RegisterForm extends CFormModel
 {
 	public $username;
 	public $email;

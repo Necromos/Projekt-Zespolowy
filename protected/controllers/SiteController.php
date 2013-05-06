@@ -74,17 +74,19 @@ class SiteController extends Controller
 	/**
 	 * Display submit/register page
 	 */
-	public function actionSubmitRegister()
+	public function actionRegister()
 	{
-		$model=new SubmitRegisterForm;
+		if (!Yii::app()->user->isGuest)
+			$this->redirect(Yii::app()->homeUrl);
+		$model=new RegisterForm;
 		$this->performAjaxValidation($model);
-		if(isset($_POST['SubmitRegisterForm']))
+		if(isset($_POST['RegisterForm']))
 		{
-			$model->attributes=$_POST['SubmitRegisterForm'];
+			$model->attributes=$_POST['RegisterForm'];
 			if($model->validate() && $model->submit())
 				$this->redirect(Yii::app()->homeUrl);
 		}
-		$this->render('submitRegister',array('model'=>$model));
+		$this->render('register',array('model'=>$model));
 	}
 	
 	
@@ -127,7 +129,7 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+				$this->redirect(Yii::app()->homeUrl);
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));

@@ -3,9 +3,9 @@
 /* @var $model SubmitRegisterForm */
 /* @var $form CActiveForm  */
 
-$this->pageTitle=Yii::app()->name . ' - Submit/Register';
+$this->pageTitle=Yii::app()->name . ' - Register';
 $this->breadcrumbs=array(
-	'Submit/Register',
+	'Register',
 );
 ?>
 
@@ -15,8 +15,8 @@ $this->breadcrumbs=array(
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'submit-register-form',
-    'enableAjaxValidation'=>true,
+	'id'=>'register-form',
+    //'enableAjaxValidation'=>true,
     'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
@@ -68,7 +68,7 @@ $this->breadcrumbs=array(
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Register/Submit'); ?>
+		<?php echo CHtml::submitButton('Register'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
