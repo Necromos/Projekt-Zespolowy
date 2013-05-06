@@ -31,7 +31,7 @@
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Article', 'url'=>array('/site/submitArticle'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Article', 'url'=>array('/site/article'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Register', 'url'=>array('/site/register'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),

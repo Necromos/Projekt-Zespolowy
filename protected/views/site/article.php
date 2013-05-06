@@ -3,13 +3,13 @@
 /* @var $model SubmitRegisterForm */
 /* @var $form CActiveForm  */
 
-$this->pageTitle=Yii::app()->name . ' - Submit/Article';
+$this->pageTitle=Yii::app()->name . ' - Article';
 $this->breadcrumbs=array(
-	'Submit/Article',
+	'Article',
 );
 ?>
 
-<h1>Submit/Article</h1>
+<h1>Article</h1>
 
 <p>Please fill out the following form with your credentials:</p>
 
@@ -18,7 +18,7 @@ $this->breadcrumbs=array(
 $form=$this->beginWidget(
 	'CActiveForm', 
 	array(
-		'id'=>'submit-article-form',
+		'id'=>'article-form',
     	'enableAjaxValidation'=>true,
     	'enableClientValidation'=>true,
 		'htmlOptions' => array('enctype' => 'multipart/form-data'),
@@ -48,7 +48,7 @@ $form=$this->beginWidget(
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Article/Submit'); ?>
+		<?php echo CHtml::submitButton('Submit'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
