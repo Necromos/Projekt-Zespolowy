@@ -1,10 +1,10 @@
 ﻿<?php
-class SubmitArticleForm extends CFormModel
+class ArticleForm extends CFormModel
 {
-	public $author;
-	public $title;
-	public $content;
-	public $files;
+	public $author = 'Test';
+	public $title = 'Test';
+	public $content = 'Test';
+	public $files = 'Test';
 	
 	
 	/**
@@ -14,11 +14,11 @@ class SubmitArticleForm extends CFormModel
 	 */
 	public function rules(){
 		return array(
-			array('author, title, content, files', 'required', 'on'=>'insert,update'),
+			array('author, title, content, files', 'required'),
 			array('author', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>50),
-			array('content', 'length', 'max'=>50),
-			array('files', 'file', 'allowEmpty'=>true, 'on'=>'update'), // 'types'=>'application/pdf,application/zip,text/plain,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+			array('content', 'length', 'max'=>100),
+			array('files', 'file', 'allowEmpty'=>true), // 'types'=>'application/pdf,application/zip,text/plain,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document'
 		);
 	}
 	
@@ -39,7 +39,7 @@ class SubmitArticleForm extends CFormModel
     	$record->title=$this->title;
     	$record->content=$this->content;
     	$record->create_date=date('Y-m-d');
-		return false;
+		
 	}
 
 	
