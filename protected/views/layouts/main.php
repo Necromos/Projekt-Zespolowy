@@ -35,6 +35,7 @@
 				//array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Register', 'url'=>array('/user/register'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Update Profile', 'url'=>array('/user/update'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Add Review', 'url'=>array('/review/create'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Login', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/user/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
