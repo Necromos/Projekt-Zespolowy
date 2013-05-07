@@ -2389,3 +2389,409 @@ Stack trace:
 REQUEST_URI=/informatica/index.php?r=user/register
 HTTP_REFERER=http://localhost/informatica/index.php?r=user/register
 ---
+2013/05/07 17:52:05 [error] [exception.CException] exception 'CException' with message 'UserController cannot find the requested view "contact".' in C:\xampp\htdocs\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(782): CController->renderPartial('contact', Array, true)
+#1 C:\xampp\htdocs\informatica\protected\controllers\UserController.php(86): CController->render('contact', Array)
+#2 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#3 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('update')
+#7 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('user/update')
+#8 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\informatica\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/informatica/index.php?r=user/update
+HTTP_REFERER=http://localhost/informatica/index.php?r=site/index
+---
+2013/05/07 17:55:30 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser._id" is not defined.' in C:\xampp\htdocs\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\auth\CWebUser.php(140): CComponent->__get('_id')
+#1 C:\xampp\htdocs\informatica\protected\models\UpdateForm.php(20): CWebUser->__get('_id')
+#2 C:\xampp\htdocs\framework\web\CFormModel.php(39): UpdateForm->init()
+#3 C:\xampp\htdocs\informatica\protected\controllers\UserController.php(76): CFormModel->__construct()
+#4 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#5 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('update')
+#9 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('user/update')
+#10 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\informatica\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/informatica/index.php?r=user/update
+HTTP_REFERER=http://localhost/informatica/index.php?r=user/update
+---
+2013/05/07 17:57:13 [error] [php] htmlspecialchars() expects parameter 1 to be string, object given (C:\xampp\htdocs\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\widgets\CActiveForm.php(702): activeTextArea()
+#1 C:\xampp\htdocs\informatica\protected\views\user\update.php(62): CActiveForm->textArea()
+#2 C:\xampp\htdocs\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\framework\web\CBaseController.php(95): UserController->renderInternal()
+#4 C:\xampp\htdocs\framework\web\CController.php(869): UserController->renderFile()
+#5 C:\xampp\htdocs\framework\web\CController.php(782): UserController->renderPartial()
+#6 C:\xampp\htdocs\informatica\protected\controllers\UserController.php(86): UserController->render()
+#7 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#8 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\framework\web\CController.php(286): UserController->runAction()
+#10 C:\xampp\htdocs\framework\web\CController.php(265): UserController->runActionWithFilters()
+#11 C:\xampp\htdocs\framework\web\CWebApplication.php(282): UserController->run()
+#12 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\informatica\index.php(13): CWebApplication->run()
+REQUEST_URI=/informatica/index.php?r=user/update
+in C:\xampp\htdocs\informatica\protected\views\user\update.php (62)
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (86)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 17:57:58 [error] [php] Object of class CMap could not be converted to string (C:\xampp\htdocs\informatica\protected\models\UpdateForm.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#1 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\framework\web\CController.php(286): UserController->runAction()
+#3 C:\xampp\htdocs\framework\web\CController.php(265): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\framework\web\CWebApplication.php(282): UserController->run()
+#5 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\informatica\index.php(13): CWebApplication->run()
+REQUEST_URI=/informatica/index.php?r=user/update
+in C:\xampp\htdocs\informatica\protected\models\UpdateForm.php (22)
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (76)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:00:45 [error] [php] Indirect modification of overloaded property CMap::$keys has no effect (C:\xampp\htdocs\informatica\protected\models\UpdateForm.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#1 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\framework\web\CController.php(286): UserController->runAction()
+#3 C:\xampp\htdocs\framework\web\CController.php(265): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\framework\web\CWebApplication.php(282): UserController->run()
+#5 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\informatica\index.php(13): CWebApplication->run()
+REQUEST_URI=/informatica/index.php?r=user/update
+in C:\xampp\htdocs\informatica\protected\models\UpdateForm.php (22)
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (76)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:04:43 [error] [php] array_shift() expects parameter 1 to be array, object given (C:\xampp\htdocs\informatica\protected\models\UpdateForm.php:24)
+Stack trace:
+#0 C:\xampp\htdocs\informatica\protected\controllers\UserController.php(76): UpdateForm->__construct()
+#1 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#2 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\framework\web\CController.php(286): UserController->runAction()
+#4 C:\xampp\htdocs\framework\web\CController.php(265): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\framework\web\CWebApplication.php(282): UserController->run()
+#6 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\informatica\index.php(13): CWebApplication->run()
+REQUEST_URI=/informatica/index.php?r=user/update
+in C:\xampp\htdocs\informatica\protected\models\UpdateForm.php (24)
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (76)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:06:26 [error] [php] htmlspecialchars() expects parameter 1 to be string, object given (C:\xampp\htdocs\framework\web\helpers\CHtml.php:98)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\widgets\CActiveForm.php(702): activeTextArea()
+#1 C:\xampp\htdocs\informatica\protected\views\user\update.php(62): CActiveForm->textArea()
+#2 C:\xampp\htdocs\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\framework\web\CBaseController.php(95): UserController->renderInternal()
+#4 C:\xampp\htdocs\framework\web\CController.php(869): UserController->renderFile()
+#5 C:\xampp\htdocs\framework\web\CController.php(782): UserController->renderPartial()
+#6 C:\xampp\htdocs\informatica\protected\controllers\UserController.php(86): UserController->render()
+#7 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#8 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\framework\web\CController.php(286): UserController->runAction()
+#10 C:\xampp\htdocs\framework\web\CController.php(265): UserController->runActionWithFilters()
+#11 C:\xampp\htdocs\framework\web\CWebApplication.php(282): UserController->run()
+#12 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\informatica\index.php(13): CWebApplication->run()
+REQUEST_URI=/informatica/index.php?r=user/update
+in C:\xampp\htdocs\informatica\protected\views\user\update.php (62)
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (86)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:08:56 [error] [php] Object of class Tag could not be converted to string (C:\xampp\htdocs\informatica\protected\models\UpdateForm.php:24)
+Stack trace:
+#0 C:\xampp\htdocs\informatica\protected\controllers\UserController.php(76): UpdateForm->__construct()
+#1 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#2 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\framework\web\CController.php(286): UserController->runAction()
+#4 C:\xampp\htdocs\framework\web\CController.php(265): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\framework\web\CWebApplication.php(282): UserController->run()
+#6 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\informatica\index.php(13): CWebApplication->run()
+REQUEST_URI=/informatica/index.php?r=user/update
+in C:\xampp\htdocs\informatica\protected\models\UpdateForm.php (24)
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (76)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:09:24 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\informatica\protected\models\UpdateForm.php:24)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#1 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\framework\web\CController.php(286): UserController->runAction()
+#3 C:\xampp\htdocs\framework\web\CController.php(265): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\framework\web\CWebApplication.php(282): UserController->run()
+#5 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\informatica\index.php(13): CWebApplication->run()
+REQUEST_URI=/informatica/index.php?r=user/update
+in C:\xampp\htdocs\informatica\protected\models\UpdateForm.php (24)
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (76)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:09:48 [error] [php] Object of class Tag could not be converted to string (C:\xampp\htdocs\informatica\protected\models\UpdateForm.php:24)
+Stack trace:
+#0 C:\xampp\htdocs\informatica\protected\controllers\UserController.php(76): UpdateForm->__construct()
+#1 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#2 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\framework\web\CController.php(286): UserController->runAction()
+#4 C:\xampp\htdocs\framework\web\CController.php(265): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\framework\web\CWebApplication.php(282): UserController->run()
+#6 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\informatica\index.php(13): CWebApplication->run()
+REQUEST_URI=/informatica/index.php?r=user/update
+in C:\xampp\htdocs\informatica\protected\models\UpdateForm.php (24)
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (76)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:11:00 [error] [php] Object of class Tag could not be converted to string (C:\xampp\htdocs\informatica\protected\models\UpdateForm.php:26)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#1 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\framework\web\CController.php(286): UserController->runAction()
+#3 C:\xampp\htdocs\framework\web\CController.php(265): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\framework\web\CWebApplication.php(282): UserController->run()
+#5 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\informatica\index.php(13): CWebApplication->run()
+REQUEST_URI=/informatica/index.php?r=user/update
+in C:\xampp\htdocs\informatica\protected\models\UpdateForm.php (26)
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (76)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:11:21 [error] [php] Undefined variable: res (C:\xampp\htdocs\informatica\protected\models\UpdateForm.php:26)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#1 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\framework\web\CController.php(286): UserController->runAction()
+#3 C:\xampp\htdocs\framework\web\CController.php(265): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\framework\web\CWebApplication.php(282): UserController->run()
+#5 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\informatica\index.php(13): CWebApplication->run()
+REQUEST_URI=/informatica/index.php?r=user/update
+in C:\xampp\htdocs\informatica\protected\models\UpdateForm.php (26)
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (76)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:12:29 [error] [php] Undefined index: ContactForm (C:\xampp\htdocs\informatica\protected\controllers\UserController.php:79)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(286): UserController->runAction()
+#1 C:\xampp\htdocs\framework\web\CController.php(265): UserController->runActionWithFilters()
+#2 C:\xampp\htdocs\framework\web\CWebApplication.php(282): UserController->run()
+#3 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\informatica\index.php(13): CWebApplication->run()
+REQUEST_URI=/informatica/index.php?r=user/update
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:12:45 [warning] [application] Failed to set unsafe attribute "prevPassword" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:12:45 [warning] [application] Failed to set unsafe attribute "password2" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:12:45 [warning] [application] Failed to set unsafe attribute "tags" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:33:12 [warning] [application] Failed to set unsafe attribute "prevPassword" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:33:12 [warning] [application] Failed to set unsafe attribute "password2" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:33:12 [warning] [application] Failed to set unsafe attribute "tags" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:33:59 [warning] [application] Failed to set unsafe attribute "prevPassword" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:33:59 [warning] [application] Failed to set unsafe attribute "password2" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:33:59 [warning] [application] Failed to set unsafe attribute "tags" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:33:59 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@rer.rrreasd' at line 1. The SQL statement executed was: SELECT * FROM `user` `t` WHERE email = mas@rer.rrreasd.
+in C:\xampp\htdocs\informatica\protected\models\UpdateForm.php (74)
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (80)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:33:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@rer.rrreasd' at line 1. The SQL statement executed was: SELECT * FROM `user` `t` WHERE email = mas@rer.rrreasd' in C:\xampp\htdocs\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\informatica\protected\models\UpdateForm.php(74): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\informatica\protected\controllers\UserController.php(80): UpdateForm->submit()
+#5 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#6 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('update')
+#10 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('user/update')
+#11 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\informatica\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/informatica/index.php?r=user/update
+HTTP_REFERER=http://localhost/informatica/index.php?r=user/update
+---
+2013/05/07 18:34:49 [warning] [application] Failed to set unsafe attribute "prevPassword" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:34:49 [warning] [application] Failed to set unsafe attribute "password2" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:34:49 [warning] [application] Failed to set unsafe attribute "tags" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:34:49 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\informatica\protected\models\UpdateForm.php:75)
+Stack trace:
+#0 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\framework\web\CController.php(286): UserController->runAction()
+#2 C:\xampp\htdocs\framework\web\CController.php(265): UserController->runActionWithFilters()
+#3 C:\xampp\htdocs\framework\web\CWebApplication.php(282): UserController->run()
+#4 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\informatica\index.php(13): CWebApplication->run()
+REQUEST_URI=/informatica/index.php?r=user/update
+in C:\xampp\htdocs\informatica\protected\models\UpdateForm.php (75)
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (80)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:35:23 [warning] [application] Failed to set unsafe attribute "prevPassword" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:35:23 [warning] [application] Failed to set unsafe attribute "password2" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:35:23 [warning] [application] Failed to set unsafe attribute "tags" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:37:56 [warning] [application] Failed to set unsafe attribute "prevPassword" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:37:56 [warning] [application] Failed to set unsafe attribute "password2" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:37:56 [warning] [application] Failed to set unsafe attribute "tags" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:40:16 [warning] [application] Failed to set unsafe attribute "prevPassword" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:40:16 [warning] [application] Failed to set unsafe attribute "password" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:40:16 [warning] [application] Failed to set unsafe attribute "password2" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:40:16 [warning] [application] Failed to set unsafe attribute "tags" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:40:19 [warning] [application] Failed to set unsafe attribute "prevPassword" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:40:19 [warning] [application] Failed to set unsafe attribute "password" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:40:19 [warning] [application] Failed to set unsafe attribute "password2" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:40:19 [warning] [application] Failed to set unsafe attribute "tags" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:40:49 [warning] [application] Failed to set unsafe attribute "prevPassword" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:40:49 [warning] [application] Failed to set unsafe attribute "password" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:40:49 [warning] [application] Failed to set unsafe attribute "password2" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:40:49 [warning] [application] Failed to set unsafe attribute "tags" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:42:13 [warning] [application] Failed to set unsafe attribute "prevPassword" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:42:13 [warning] [application] Failed to set unsafe attribute "password" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:42:13 [warning] [application] Failed to set unsafe attribute "password2" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:42:13 [warning] [application] Failed to set unsafe attribute "tags" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:42:13 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'tag' cannot be null. The SQL statement executed was: INSERT INTO `user_tag` (`user`, `tag`) VALUES (:user, :tag).
+in C:\xampp\htdocs\informatica\protected\extensions\Su_MpaK\Taggable\behaviours\TaggableBehaviour.php (175)
+in C:\xampp\htdocs\informatica\protected\models\UpdateForm.php (82)
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (80)
+2013/05/07 18:42:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'tag' cannot be null. The SQL statement executed was: INSERT INTO `user_tag` (`user`, `tag`) VALUES (:user, :tag)' in C:\xampp\htdocs\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\framework\db\CDbCommand.php(1247): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\informatica\protected\extensions\Su_MpaK\Taggable\behaviours\TaggableBehaviour.php(175): CDbCommand->insert('user_tag', Array)
+#2 C:\xampp\htdocs\framework\base\CComponent.php(558): TaggableBehaviour->afterSave(Object(CEvent))
+#3 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(838): CComponent->raiseEvent('onAfterSave', Object(CEvent))
+#4 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(918): CActiveRecord->onAfterSave(Object(CEvent))
+#5 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(1072): CActiveRecord->afterSave()
+#6 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(795): CActiveRecord->update(NULL)
+#7 C:\xampp\htdocs\informatica\protected\models\UpdateForm.php(82): CActiveRecord->save()
+#8 C:\xampp\htdocs\informatica\protected\controllers\UserController.php(80): UpdateForm->submit()
+#9 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#10 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('user/update')
+#15 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\informatica\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/informatica/index.php?r=user/update
+HTTP_REFERER=http://localhost/informatica/index.php?r=user/update
+---
+2013/05/07 18:42:27 [warning] [application] Failed to set unsafe attribute "prevPassword" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:42:27 [warning] [application] Failed to set unsafe attribute "password" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:42:27 [warning] [application] Failed to set unsafe attribute "password2" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:42:27 [warning] [application] Failed to set unsafe attribute "tags" of "UpdateForm".
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (79)
+in C:\xampp\htdocs\informatica\index.php (13)
+2013/05/07 18:42:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'tag' cannot be null. The SQL statement executed was: INSERT INTO `user_tag` (`user`, `tag`) VALUES (:user, :tag).
+in C:\xampp\htdocs\informatica\protected\extensions\Su_MpaK\Taggable\behaviours\TaggableBehaviour.php (175)
+in C:\xampp\htdocs\informatica\protected\models\UpdateForm.php (82)
+in C:\xampp\htdocs\informatica\protected\controllers\UserController.php (80)
+2013/05/07 18:42:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'tag' cannot be null. The SQL statement executed was: INSERT INTO `user_tag` (`user`, `tag`) VALUES (:user, :tag)' in C:\xampp\htdocs\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\framework\db\CDbCommand.php(1247): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\informatica\protected\extensions\Su_MpaK\Taggable\behaviours\TaggableBehaviour.php(175): CDbCommand->insert('user_tag', Array)
+#2 C:\xampp\htdocs\framework\base\CComponent.php(558): TaggableBehaviour->afterSave(Object(CEvent))
+#3 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(838): CComponent->raiseEvent('onAfterSave', Object(CEvent))
+#4 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(918): CActiveRecord->onAfterSave(Object(CEvent))
+#5 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(1072): CActiveRecord->afterSave()
+#6 C:\xampp\htdocs\framework\db\ar\CActiveRecord.php(795): CActiveRecord->update(NULL)
+#7 C:\xampp\htdocs\informatica\protected\models\UpdateForm.php(82): CActiveRecord->save()
+#8 C:\xampp\htdocs\informatica\protected\controllers\UserController.php(80): UpdateForm->submit()
+#9 C:\xampp\htdocs\framework\web\actions\CInlineAction.php(49): UserController->actionUpdate()
+#10 C:\xampp\htdocs\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\xampp\htdocs\framework\web\CWebApplication.php(141): CWebApplication->runController('user/update')
+#15 C:\xampp\htdocs\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\informatica\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/informatica/index.php?r=user/update
+HTTP_REFERER=http://localhost/informatica/index.php?r=user/update
+---

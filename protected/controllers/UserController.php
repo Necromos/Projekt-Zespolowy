@@ -70,6 +70,23 @@ class UserController extends Controller
 		$this->redirect(Yii::app()->homeUrl);
 	}
 
+
+	public function actionUpdate()
+	{
+		$model=new UpdateForm;
+		if(isset($_POST['UpdateForm']))
+		{
+			$model->attributes=$_POST['UpdateForm'];
+			if($model->validate() && $model->submit())
+			{
+				Yii::app()->user->setFlash('update','Your account is updated.');
+				$this->refresh();
+			}
+		}
+		$this->render('update',array('model'=>$model));
+	}
+
+
 	protected function performAjaxValidation($model)
 	{
 	    if(isset($_POST['ajax']) && $_POST['ajax']==='user-form')
