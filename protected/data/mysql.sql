@@ -52,7 +52,8 @@ FOREIGN KEY (status) REFERENCES status(id_status);
 
 CREATE TABLE tag (
   id_tag INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(20)
+  name VARCHAR(255) NOT NULL,
+  UNIQUE INDEX name_UNIQUE (name ASC) 
 );
 
 CREATE TABLE article_tag (

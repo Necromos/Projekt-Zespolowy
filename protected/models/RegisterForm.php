@@ -9,6 +9,7 @@ class RegisterForm extends CFormModel
 	public $password;
 	public $password2;
 	public $rememberMe;
+	public $tags;
 
 	private $_identity;
 
@@ -20,7 +21,7 @@ class RegisterForm extends CFormModel
 	public function rules()
 	{
 		return array(
-			array('username, email, firstName, lastName, password, password2', 'required'),
+			array('username, email, firstName, lastName, password, password2, tags', 'required'),
 			array('email','email'),
 			array('username', 'length', 'min'=>3, 'max'=>12),
 			array('password', 'length', 'min'=>8, 'max'=>16),
@@ -53,17 +54,18 @@ class RegisterForm extends CFormModel
     	$record->firstname=$this->firstName;
     	$record->lastname=$this->lastName;
     	$record->register_date=date('Y-m-d');
-    	if($record->save())
-    	{
-    		$identity = new UserIdentity($this->username,$this->password);
-    		$identity->authenticate();
-    		if($identity->errorCode===UserIdentity::ERROR_NONE)
+    	$record->tags->add((string)$this->tags);
+	    if($record->save())
+	    {
+	    	$identity = new UserIdentity($this->username,$this->password);
+	    	$identity->authenticate();
+	    	if($identity->errorCode===UserIdentity::ERROR_NONE)
 			{
 				$duration=$this->rememberMe ? 3600*24*30 : 0; // 30 days
 				Yii::app()->user->login($identity,$duration);
-	    		return true;
-	    	}
-    	}
-		return false;
+		   		return true;
+		   	}
+	    }	
+    	return false;
 	}
 }

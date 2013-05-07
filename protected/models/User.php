@@ -107,4 +107,30 @@ class User extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	public function behaviors() {
+        return array(
+            'tags' => array(
+                'class' => 'ext.Su_MpaK.Taggable.behaviours.TaggableBehaviour',
+ 
+                // Tag model path alias.
+                'tagModel' => 'Tag',
+ 
+                // The field name which contains tag title.
+                'tagTableTitle' => 'name',
+ 
+                // The name of relation table.
+                'tagRelationTable' => 'user_tag',
+ 
+                // The name of attribute in relation table which recalls tag.
+                'tagRelationTableTagFk' => 'tag',
+ 
+                // The name of attribute in relation table which recalls model.
+                'tagRelationTableModelFk' => 'user',
+ 
+                // Separator for tags in strings.
+                'tagsSeparator' => ','
+            )
+        );
+    }
 }
