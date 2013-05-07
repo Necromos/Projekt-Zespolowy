@@ -51,9 +51,9 @@ ADD CONSTRAINT FK_article_status_status
 FOREIGN KEY (status) REFERENCES status(id_status);
 
 CREATE TABLE tag (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(255),
-  UNIQUE KEY `tag_name` (`name`)
+  id_tag INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) UNIQUE,
+  count INT UNSIGNED
 );
 
 CREATE TABLE article_tag (
@@ -70,9 +70,8 @@ ADD CONSTRAINT FK_article_tag_tag
 FOREIGN KEY (tag) REFERENCES tag(id_tag);
 */
 CREATE TABLE user_tag (
-  user_id INT NOT NULL,
-  tagId INT NOT NULL,
-  PRIMARY KEY  (`user_id`,`tagId`)
+  user INT NOT NULL,
+  tag INT NOT NULL
 );
 /*
 ALTER TABLE user_tag

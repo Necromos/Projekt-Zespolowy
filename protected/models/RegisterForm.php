@@ -9,8 +9,6 @@ class RegisterForm extends CFormModel
 	public $password;
 	public $password2;
 	public $rememberMe;
-	public $tags;
-
 
 	private $_identity;
 
@@ -55,7 +53,6 @@ class RegisterForm extends CFormModel
     	$record->firstname=$this->firstName;
     	$record->lastname=$this->lastName;
     	$record->register_date=date('Y-m-d');
-    	$record->setTags($this->tags);
     	if($record->save())
     	{
     		$identity = new UserIdentity($this->username,$this->password);

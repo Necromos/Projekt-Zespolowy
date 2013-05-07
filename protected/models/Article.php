@@ -110,7 +110,7 @@ class Article extends CActiveRecord
 	{
 		return array(
 			'tags' => array(
-		        'class' => 'ext.yiiext-taggable-behavior.ETaggableBehavior',
+		        'class' => 'ext.yiiext.behaviors.model.taggable.ETaggableBehavior',
 		        // Table where tags are stored
 		        'tagTable' => 'tag',
 		        // Cross-table that stores tag-model connections.
