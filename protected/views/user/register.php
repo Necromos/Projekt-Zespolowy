@@ -61,6 +61,12 @@ $this->breadcrumbs=array(
 		<?php echo $form->error($model,'password2'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'tags'); ?>
+		<?php echo $form->textField($model,'tags'); ?>
+		<?php echo $form->error($model,'tags'); ?>
+	</div>
+
 	<div class="row rememberMe">
 		<?php echo $form->checkBox($model,'rememberMe'); ?>
 		<?php echo $form->label($model,'rememberMe'); ?>

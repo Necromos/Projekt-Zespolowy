@@ -17,6 +17,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'ext.yiiext.behaviors.model.taggable.*',
 	),
 
 	'modules'=>array(
