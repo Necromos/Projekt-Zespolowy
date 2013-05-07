@@ -1,27 +1,22 @@
 <?php
 
 /**
- * This is the model class for table "article".
+ * This is the model class for table "article_tag".
  *
- * The followings are the available columns in table 'article':
- * @property integer $id_article
- * @property integer $author
- * @property string $title
- * @property string $content
- * @property string $create_date
+ * The followings are the available columns in table 'article_tag':
+ * @property integer $article
+ * @property integer $tag
  *
  * The followings are the available model relations:
- * @property User $author0
- * @property ArticleHistory[] $articleHistories
- * @property ArticleTag[] $articleTags
- * @property Review[] $reviews
+ * @property Tag $tag0
+ * @property Article $article0
  */
-class Article extends CActiveRecord
+class ArticleTag extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Article the static model class
+	 * @return ArticleTag the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -33,7 +28,7 @@ class Article extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'article';
+		return 'article_tag';
 	}
 
 	/**
@@ -44,14 +39,11 @@ class Article extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('author, content', 'required'),
-			array('author', 'numerical', 'integerOnly'=>true),
-			array('title', 'length', 'max'=>50),
-			array('content', 'length', 'max'=>100),
-			array('create_date', 'safe'),
+			array('article, tag', 'required'),
+			array('article, tag', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id_article, author, title, content, create_date', 'safe', 'on'=>'search'),
+			array('article, tag', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,10 +55,8 @@ class Article extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'author0' => array(self::BELONGS_TO, 'User', 'author'),
-			'articleHistories' => array(self::HAS_MANY, 'ArticleHistory', 'article'),
-			'articleTags' => array(self::HAS_MANY, 'ArticleTag', 'article'),
-			'reviews' => array(self::HAS_MANY, 'Review', 'article'),
+			'tag0' => array(self::BELONGS_TO, 'Tag', 'tag'),
+			'article0' => array(self::BELONGS_TO, 'Article', 'article'),
 		);
 	}
 
@@ -76,11 +66,8 @@ class Article extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_article' => 'Id Article',
-			'author' => 'Author',
-			'title' => 'Title',
-			'content' => 'Content',
-			'create_date' => 'Create Date',
+			'article' => 'Article',
+			'tag' => 'Tag',
 		);
 	}
 
@@ -95,11 +82,8 @@ class Article extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id_article',$this->id_article);
-		$criteria->compare('author',$this->author);
-		$criteria->compare('title',$this->title,true);
-		$criteria->compare('content',$this->content,true);
-		$criteria->compare('create_date',$this->create_date,true);
+		$criteria->compare('article',$this->article);
+		$criteria->compare('tag',$this->tag);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

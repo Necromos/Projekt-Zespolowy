@@ -1,27 +1,22 @@
 <?php
 
 /**
- * This is the model class for table "user".
+ * This is the model class for table "tag".
  *
- * The followings are the available columns in table 'user':
- * @property integer $id_user
- * @property string $username
- * @property string $password
- * @property string $firstname
- * @property string $lastname
- * @property string $email
- * @property string $register_date
+ * The followings are the available columns in table 'tag':
+ * @property integer $id_tag
+ * @property string $name
  *
  * The followings are the available model relations:
- * @property Article[] $articles
+ * @property ArticleTag[] $articleTags
  * @property UserTag[] $userTags
  */
-class User extends CActiveRecord
+class Tag extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return User the static model class
+	 * @return Tag the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -33,7 +28,7 @@ class User extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'user';
+		return 'tag';
 	}
 
 	/**
@@ -44,14 +39,10 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password, firstname, lastname, email', 'required'),
-			array('username, firstname, lastname', 'length', 'max'=>20),
-			array('password', 'length', 'max'=>50),
-			array('email', 'length', 'max'=>100),
-			array('register_date', 'safe'),
+			array('name', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id_user, username, password, firstname, lastname, email, register_date', 'safe', 'on'=>'search'),
+			array('id_tag, name', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,8 +54,8 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'articles' => array(self::HAS_MANY, 'Article', 'author'),
-			'userTags' => array(self::HAS_MANY, 'UserTag', 'user'),
+			'articleTags' => array(self::HAS_MANY, 'ArticleTag', 'tag'),
+			'userTags' => array(self::HAS_MANY, 'UserTag', 'tag'),
 		);
 	}
 
@@ -74,13 +65,8 @@ class User extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_user' => 'Id User',
-			'username' => 'Username',
-			'password' => 'Password',
-			'firstname' => 'Firstname',
-			'lastname' => 'Lastname',
-			'email' => 'Email',
-			'register_date' => 'Register Date',
+			'id_tag' => 'Id Tag',
+			'name' => 'Name',
 		);
 	}
 
@@ -95,13 +81,8 @@ class User extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id_user',$this->id_user);
-		$criteria->compare('username',$this->username,true);
-		$criteria->compare('password',$this->password,true);
-		$criteria->compare('firstname',$this->firstname,true);
-		$criteria->compare('lastname',$this->lastname,true);
-		$criteria->compare('email',$this->email,true);
-		$criteria->compare('register_date',$this->register_date,true);
+		$criteria->compare('id_tag',$this->id_tag);
+		$criteria->compare('name',$this->name,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

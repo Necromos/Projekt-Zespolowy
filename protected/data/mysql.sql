@@ -52,15 +52,15 @@ FOREIGN KEY (status) REFERENCES status(id_status);
 
 CREATE TABLE tag (
   id_tag INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(255) UNIQUE,
-  count INT UNSIGNED
+  name VARCHAR(20)
 );
 
 CREATE TABLE article_tag (
   article INT NOT NULL,
-  tag INT NOT NULL
+  tag INT NOT NULL,
+  status TINYINT NOT NULL
 );
-/*
+
 ALTER TABLE article_tag
 ADD CONSTRAINT FK_article_tag_article
 FOREIGN KEY (article) REFERENCES article(id_article);
@@ -68,12 +68,12 @@ FOREIGN KEY (article) REFERENCES article(id_article);
 ALTER TABLE article_tag
 ADD CONSTRAINT FK_article_tag_tag
 FOREIGN KEY (tag) REFERENCES tag(id_tag);
-*/
+
 CREATE TABLE user_tag (
   user INT NOT NULL,
   tag INT NOT NULL
 );
-/*
+
 ALTER TABLE user_tag
 ADD CONSTRAINT FK_user_tag_article
 FOREIGN KEY (user) REFERENCES user(id_user);
@@ -81,7 +81,7 @@ FOREIGN KEY (user) REFERENCES user(id_user);
 ALTER TABLE user_tag
 ADD CONSTRAINT FK_user_tag_tag
 FOREIGN KEY (tag) REFERENCES tag(id_tag);
-*/
+
 CREATE TABLE review (
   id_review INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   reviewer INT NOT NULL,
