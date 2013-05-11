@@ -4,7 +4,7 @@
  * This is the model class for table "status".
  *
  * The followings are the available columns in table 'status':
- * @property integer $id_status
+ * @property integer $id
  * @property string $name
  *
  * The followings are the available model relations:
@@ -42,7 +42,7 @@ class Status extends CActiveRecord
 			array('name', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id_status, name', 'safe', 'on'=>'search'),
+			array('id, name', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,7 +64,7 @@ class Status extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_status' => 'Id Status',
+			'id' => 'Id Status',
 			'name' => 'Name',
 		);
 	}
@@ -80,7 +80,7 @@ class Status extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id_status',$this->id_status);
+		$criteria->compare('id',$this->id);
 		$criteria->compare('name',$this->name,true);
 
 		return new CActiveDataProvider($this, array(

@@ -8,7 +8,7 @@ DROP TABLE if exists tag;
 DROP TABLE if exists review;
 
 CREATE TABLE user (
-  id_user INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   username VARCHAR(20) NOT NULL UNIQUE,
   password VARCHAR(50) NOT NULL,
   firstname VARCHAR(20) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE user (
 );
 
 CREATE TABLE article (
-  id_article INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   author INT NOT NULL,
   title VARCHAR(50),
   content VARCHAR(100) NOT NULL,
@@ -27,15 +27,15 @@ CREATE TABLE article (
 
 ALTER TABLE article
 ADD CONSTRAINT FK_article
-FOREIGN KEY (author) REFERENCES user(id_user);
+FOREIGN KEY (author) REFERENCES user(id);
 
 CREATE TABLE status (
-  id_status INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(20) NOT NULL UNIQUE  
 );
 
 CREATE TABLE article_history (
-  id_history INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   article INT NOT NULL,
   status INT NOT NULL,
   date DATE NOT NULL,
@@ -44,14 +44,14 @@ CREATE TABLE article_history (
 
 ALTER TABLE article_history
 ADD CONSTRAINT FK_article_status_article
-FOREIGN KEY (article) REFERENCES article(id_article);
+FOREIGN KEY (article) REFERENCES article(id);
 
 ALTER TABLE article_history
 ADD CONSTRAINT FK_article_status_status
-FOREIGN KEY (status) REFERENCES status(id_status);
+FOREIGN KEY (status) REFERENCES status(id);
 
 CREATE TABLE tag (
-  id_tag INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   UNIQUE INDEX name_UNIQUE (name ASC) 
 );
@@ -64,11 +64,11 @@ CREATE TABLE article_tag (
 
 ALTER TABLE article_tag
 ADD CONSTRAINT FK_article_tag_article
-FOREIGN KEY (article) REFERENCES article(id_article);
+FOREIGN KEY (article) REFERENCES article(id);
 
 ALTER TABLE article_tag
 ADD CONSTRAINT FK_article_tag_tag
-FOREIGN KEY (tag) REFERENCES tag(id_tag);
+FOREIGN KEY (tag) REFERENCES tag(id);
 
 CREATE TABLE user_tag (
   user INT NOT NULL,
@@ -77,14 +77,14 @@ CREATE TABLE user_tag (
 
 ALTER TABLE user_tag
 ADD CONSTRAINT FK_user_tag_article
-FOREIGN KEY (user) REFERENCES user(id_user);
+FOREIGN KEY (user) REFERENCES user(id);
 
 ALTER TABLE user_tag
 ADD CONSTRAINT FK_user_tag_tag
-FOREIGN KEY (tag) REFERENCES tag(id_tag);
+FOREIGN KEY (tag) REFERENCES tag(id);
 
 CREATE TABLE review (
-  id_review INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   reviewer INT NOT NULL,
   article INT NOT NULL,
   create_date DATE,
@@ -93,8 +93,8 @@ CREATE TABLE review (
 
 ALTER TABLE review
 ADD CONSTRAINT FK_review_reviewer
-FOREIGN KEY (reviewer) REFERENCES user(id_user);
+FOREIGN KEY (reviewer) REFERENCES user(id);
 
 ALTER TABLE review
 ADD CONSTRAINT FK_review_article
-FOREIGN KEY (article) REFERENCES article(id_article);
+FOREIGN KEY (article) REFERENCES article(id);

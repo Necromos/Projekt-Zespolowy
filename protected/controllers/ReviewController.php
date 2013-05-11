@@ -75,7 +75,7 @@ class ReviewController extends Controller
 			{
 				$rootPath = pathinfo(Yii::app()->request->scriptFile);
 				$model->content->saveAs( $rootPath['dirname'].'/uploads/reviews/'.date(Y-m));
-				$this->redirect(array('view','id'=>$model->id_review));
+				$this->redirect(array('view','id'=>$model->id));
 			}
 				
 		}
@@ -101,7 +101,7 @@ class ReviewController extends Controller
 		{
 			$model->attributes=$_POST['Review'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id_review));
+				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('update',array(

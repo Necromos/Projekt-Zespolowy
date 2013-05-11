@@ -4,7 +4,7 @@
  * This is the model class for table "review".
  *
  * The followings are the available columns in table 'review':
- * @property integer $id_review
+ * @property integer $id
  * @property integer $reviewer
  * @property integer $article
  * @property string $create_date
@@ -48,7 +48,7 @@ class Review extends CActiveRecord
 			array('create_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id_review, reviewer, article, create_date, content', 'safe', 'on'=>'search'),
+			array('id, reviewer, article, create_date, content', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -71,7 +71,7 @@ class Review extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_review' => 'Id Review',
+			'id' => 'Id Review',
 			'reviewer' => 'Reviewer',
 			'article' => 'Article',
 			'create_date' => 'Create Date',
@@ -90,7 +90,7 @@ class Review extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id_review',$this->id_review);
+		$criteria->compare('id',$this->id);
 		$criteria->compare('reviewer',$this->reviewer);
 		$criteria->compare('article',$this->article);
 		$criteria->compare('create_date',$this->create_date,true);

@@ -4,7 +4,7 @@
  * This is the model class for table "article".
  *
  * The followings are the available columns in table 'article':
- * @property integer $id_article
+ * @property integer $id
  * @property integer $author
  * @property string $title
  * @property string $content
@@ -51,7 +51,7 @@ class Article extends CActiveRecord
 			array('create_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id_article, author, title, content, create_date', 'safe', 'on'=>'search'),
+			array('id, author, title, content, create_date', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -76,7 +76,7 @@ class Article extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_article' => 'Id Article',
+			'id' => 'Id Article',
 			'author' => 'Author',
 			'title' => 'Title',
 			'content' => 'Content',
@@ -95,7 +95,7 @@ class Article extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id_article',$this->id_article);
+		$criteria->compare('id',$this->id);
 		$criteria->compare('author',$this->author);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('content',$this->content,true);

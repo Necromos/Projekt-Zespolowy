@@ -17,7 +17,7 @@ class UserIdentity extends CUserIdentity
             $this->errorCode=self::ERROR_PASSWORD_INVALID;
         else
         {
-            $this->_id=$record->id_user;
+            $this->_id=$record->id;
             // w sumie nw co mozemy zachowac w sesji jeszcze
             $this->setState('name', $record->username);
             $this->errorCode=self::ERROR_NONE;

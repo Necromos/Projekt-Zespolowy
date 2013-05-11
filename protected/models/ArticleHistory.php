@@ -4,7 +4,7 @@
  * This is the model class for table "article_history".
  *
  * The followings are the available columns in table 'article_history':
- * @property integer $id_history
+ * @property integer $id
  * @property integer $article
  * @property integer $status
  * @property string $date
@@ -46,7 +46,7 @@ class ArticleHistory extends CActiveRecord
 			array('article, status, isenabled', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id_history, article, status, date, isenabled', 'safe', 'on'=>'search'),
+			array('id, article, status, date, isenabled', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,7 +69,7 @@ class ArticleHistory extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_history' => 'Id History',
+			'id' => 'Id History',
 			'article' => 'Article',
 			'status' => 'Status',
 			'date' => 'Date',
@@ -88,7 +88,7 @@ class ArticleHistory extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id_history',$this->id_history);
+		$criteria->compare('id',$this->id);
 		$criteria->compare('article',$this->article);
 		$criteria->compare('status',$this->status);
 		$criteria->compare('date',$this->date,true);
