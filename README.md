@@ -15,6 +15,7 @@ lub dłuższe zajęcie zmienić plik index.php tak by wskazywał na dobry folder
 
 * Uruchomić w bazie danych skrypty o nazwie ``mysql.sql`` oraz ``auth-schema-mysql.sql``
 
+##"Rights"
 Aplikacja również korzysta z gotowego modułu "Rights" dzięki temu modułowi możemy łatwo i szybko zarządzać uprawnieniami użytkowników w naszej aplikacjii. Więcej informacji na temat tego modułu znajdziecie:
 https://code.google.com/p/yii-rights/    oraz bezpośrednio do dokumentacji: 
 http://yii-rights.googlecode.com/files/yii-rights-doc-1.2.0.pdf
