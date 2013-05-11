@@ -16,11 +16,15 @@ return array(
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
+		'application.modules.rights.*', 
+		'application.modules.rights.components.*', // Correct paths if necessary.
 		'application.components.*',
 	),
 
 	'modules'=>array(
-		// uncomment the following to enable the Gii tool
+		'rights'=>array( 
+			'install'=>false, // Enables the installer.
+		), 
 		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
@@ -34,6 +38,7 @@ return array(
 	// application components
 	'components'=>array(
 		'user'=>array(
+		'class'=>'RWebUser', // Allows super users access implicitly.
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
@@ -63,12 +68,16 @@ return array(
 		// menadżer autoryzacji używający wbudowanej klasy oraz bazy danych
 		'authManager'=>array(
             'class'=>'CDbAuthManager',
+            'class'=>'RDbAuthManager', // Provides support authorization item sorting.
             'connectionID'=>'db',
         ),
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
 		),
+		 
+		 
+
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
