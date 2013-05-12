@@ -1,4 +1,4 @@
-DROP DATABASE if exists informatica
+DROP DATABASE if exists informatica;
 
 -- DROP TABLE if exists user_tag;
 -- DROP TABLE if exists article_tag;
