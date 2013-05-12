@@ -1,0 +1,7 @@
+RewriteEngine on
+
+# jeśli katalog lub plik istnieją, użyj ich 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# w przecwinym przypadku przekaż do index.php
+RewriteRule . index.php

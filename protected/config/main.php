@@ -23,7 +23,7 @@ return array(
 
 	'modules'=>array(
 		'rights'=>array( 
-			'install'=>false, // Enables the installer.
+			'install'=>true, // Enables the installer.
 		), 
 		
 		'gii'=>array(
