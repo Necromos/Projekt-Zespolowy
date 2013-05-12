@@ -1,3 +1,5 @@
+DROP DATABASE if exists informatica
+/*
 DROP TABLE if exists user_tag;
 DROP TABLE if exists article_tag;
 DROP TABLE if exists article_history;
@@ -6,6 +8,10 @@ DROP TABLE if exists user;
 DROP TABLE if exists status;
 DROP TABLE if exists tag;
 DROP TABLE if exists review;
+*/
+
+CREATE DATABASE informatica;
+
 
 CREATE TABLE user (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
