@@ -12,6 +12,8 @@ DROP TABLE if exists review;
 
 CREATE DATABASE informatica;
 
+USE informatica;
+
 
 CREATE TABLE user (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
