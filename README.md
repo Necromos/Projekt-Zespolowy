@@ -22,3 +22,11 @@ http://yii-rights.googlecode.com/files/yii-rights-doc-1.2.0.pdf
 
 
 Notatka: w configu trzeba dorzucic moduł install na true i wejść przez /index.php?r=rights
+
+##"Tagi"
+Metody publiczne: http://www.yiiframework.com/extension/taggable-behaviour/#hh13
+Najprościej ujmując $model->tags->add/get/has/remove/reset/set("tagi po przecinku (jbc można zmienić separator ale nw po co), jak bd dodawane z zmiennej to polecam najpierw zrobić convert na string tj (string)$this->tags ie.");
+
+##"Autocomplete"
+http://www.yiiframework.com/wiki/361/simple-way-to-use-autocomplete-using-different-id-and-display-value/
+http://www.yiiframework.com/doc/api/1.1/CJuiAutoComplete
