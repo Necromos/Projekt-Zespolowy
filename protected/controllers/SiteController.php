@@ -74,30 +74,6 @@ class SiteController extends Controller
 	}
 
 	
-	public function actionArticle()
-	{
-		$model=new ArticleForm;
-		if(isset($_POST['ArticleForm']))
-		{
-			/* ************** ADMIN Problem z odczytaniem $_POST['ArticleForm'] **************** */
-			/* Sęk jest w tym, że pomimo wysyłania formularza nie istnieje $_POST['ArticleForm'] */
-			/* ********************************************************************************* */
-			$model->attributes=$_POST['ArticleForm'];
-			$rnd = rand(0,9999);  // generate random number between 0-9999
-			$uploadedFile=CUploadedFile::getInstance($model,'files');
-            $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
-            $model->files = $fileName;
-
-			echo '<script> alert("'.$fileName.'") </script>';	
-			if($model->save())
-            {
-				$uploadedFile->saveAs(Yii::app()->basePath.'/../articles/'.$fileName);  // rootDirectory/articles
-   				if($model->validate() && $model->submit())
-					$this->redirect(Yii::app()->homeUrl);
-			}
-		}
-		$this->render('article',array('model'=>$model));
-	}
 
 	protected function performAjaxValidation($model)
 	{

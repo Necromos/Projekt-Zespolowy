@@ -35,6 +35,12 @@ class Article extends CActiveRecord
 	{
 		return 'article';
 	}
+	
+	
+	public $author;
+	public $title = 'Ala';
+	public $content = 'Ala';
+	public $files = 'Ala';
 
 	/**
 	 * @return array validation rules for model attributes.
@@ -44,17 +50,17 @@ class Article extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('author, content', 'required'),
+			array('author, content, files', 'required'),
 			array('author', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>50),
-			array('content', 'length', 'max'=>100),
+			array('content', 'file', 'types'=>'pdf, doc, docx'),
 			array('create_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, author, title, content, create_date', 'safe', 'on'=>'search'),
 		);
 	}
-
+	
 	/**
 	 * @return array relational rules.
 	 */
