@@ -66,11 +66,10 @@ CREATE TABLE tag (
 
 CREATE TABLE article_tag (
   article INT NOT NULL,
-  tag INT NOT NULL,
-  status TINYINT NOT NULL
+  tag INT NOT ALTER
 );
 
-ALTER TABLE article_tag
+NULL TABLE article_tag
 ADD CONSTRAINT FK_article_tag_article
 FOREIGN KEY (article) REFERENCES article(id);
 
