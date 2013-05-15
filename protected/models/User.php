@@ -28,6 +28,22 @@ class User extends CActiveRecord
 		return parent::model($className);
 	}
 
+	public static function isExistUser($userName){
+    	$user = self::model()->find('LOWER(username)=?', array($userName));
+        return !($user===null);       
+    }
+	public static function updateUsers($usersString, $article_id){
+    	//$explodedUsers = explode(",", $usersString);
+        foreach($usersString as $singleCouse){
+        	//$singleCouse = trim($singleCouse);
+            if($singleCouse==="")
+            	continue;
+				
+            $user=User::model()->findByPk($singleCouse);
+            Article_user::updateAssignments($article_id, $user->id);
+                          
+        }
+    }
 	/**
 	 * @return string the associated database table name
 	 */
@@ -63,8 +79,9 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'articles' => array(self::HAS_MANY, 'Article', 'author'),
+			//'articles' => array(self::HAS_MANY, 'Article', 'author'),
 			'userTags' => array(self::HAS_MANY, 'UserTag', 'user'),
+			'FK_user_id' => array(self::MANY_MANY, 'Article', 'article_user(user_id, article_id)'),
 		);
 	}
 
