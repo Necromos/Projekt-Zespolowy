@@ -74,9 +74,10 @@ class UserController extends Controller
 
 	public function actionUpdate()
 	{
-		if (!Yii::app()->user->isGuest)
+		if (Yii::app()->user->isGuest)
 			$this->redirect(Yii::app()->homeUrl);
 		$model=new UpdateForm;
+		$this->performAjaxValidation($model);
 		if(isset($_POST['UpdateForm']))
 		{
 			$model->attributes=$_POST['UpdateForm'];
@@ -92,7 +93,7 @@ class UserController extends Controller
 
 	protected function performAjaxValidation($model)
 	{
-	    if(isset($_POST['ajax']) && ($_POST['ajax']==='login-form' || $_POST['ajax']==='register-form'))
+	    if(isset($_POST['ajax']) && ($_POST['ajax']==='login-form' || $_POST['ajax']==='register-form' || $_POST['ajax']==='update-form'))
 	    {
 	        echo CActiveForm::validate($model);
 	        Yii::app()->end();

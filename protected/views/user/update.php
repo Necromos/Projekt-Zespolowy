@@ -23,13 +23,13 @@ $this->breadcrumbs=array(
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'update-form',
-	'enableClientValidation'=>true,
+    'enableAjaxValidation'=>true,
+    'enableClientValidation'=>true,
 	'clientOptions'=>array(
+		'validateOnType'=>true,
 		'validateOnSubmit'=>true,
 	),
 )); ?>
-
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
