@@ -23,10 +23,14 @@ class Article extends CActiveRecord
 	 * @param string $className active record class name.
 	 * @return Article the static model class
 	 */
+	 
+	public $author;
+	
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
+	
 
 	/**
 	 * @return string the associated database table name
@@ -35,12 +39,6 @@ class Article extends CActiveRecord
 	{
 		return 'article';
 	}
-	
-	
-	public $author;
-	public $title = 'Ala';
-	public $content = 'Ala';
-	public $files = 'Ala';
 
 	/**
 	 * @return array validation rules for model attributes.
@@ -50,17 +48,23 @@ class Article extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('author, content, files', 'required'),
-			array('author', 'numerical', 'integerOnly'=>true),
+			array('title, content, author', 'required'),
+			array('author', 'type','type'=>'array','allowEmpty'=>false),
 			array('title', 'length', 'max'=>50),
 			array('content', 'file', 'types'=>'pdf, doc, docx'),
 			array('create_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, author, title, content, create_date', 'safe', 'on'=>'search'),
+			array('id, title, content, create_date', 'safe', 'on'=>'search'),
 		);
 	}
 	
+	
+	public function afterSave(){
+    	parent::afterSave();
+        User::updateUsers($this->author, $this->id);
+    }
+		
 	/**
 	 * @return array relational rules.
 	 */
@@ -73,8 +77,11 @@ class Article extends CActiveRecord
 			'articleHistories' => array(self::HAS_MANY, 'ArticleHistory', 'article'),
 			'articleTags' => array(self::HAS_MANY, 'ArticleTag', 'article'),
 			'reviews' => array(self::HAS_MANY, 'Review', 'article'),
+			//'project_id' => array(self::MANY_MANY, 'Project', 'project_user_assignment(user_id, project_id)')
+			'FK_article_id' => array(self::MANY_MANY, 'User', 'article_user(article_id, user_id)'),
 		);
 	}
+	
 
 	/**
 	 * @return array customized attribute labels (name=>label)
@@ -89,6 +96,8 @@ class Article extends CActiveRecord
 			'create_date' => 'Create Date',
 		);
 	}
+	
+	
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
@@ -102,7 +111,6 @@ class Article extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('author',$this->author);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('content',$this->content,true);
 		$criteria->compare('create_date',$this->create_date,true);
@@ -111,30 +119,4 @@ class Article extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-
-	public function behaviors() {
-        return array(
-            'tags' => array(
-                'class' => 'ext.Su_MpaK.Taggable.behaviours.TaggableBehaviour',
- 
-                // Tag model path alias.
-                'tagModel' => 'Tag',
- 
-                // The field name which contains tag title.
-                'tagTableTitle' => 'name',
- 
-                // The name of relation table.
-                'tagRelationTable' => 'article_tag',
- 
-                // The name of attribute in relation table which recalls tag.
-                'tagRelationTableTagFk' => 'tag',
- 
-                // The name of attribute in relation table which recalls model.
-                'tagRelationTableModelFk' => 'article',
- 
-                // Separator for tags in strings.
-                'tagsSeparator' => ','
-            )
-        );
-    }
 }

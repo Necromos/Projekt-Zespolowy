@@ -27,15 +27,23 @@ CREATE TABLE user (
 
 CREATE TABLE article (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  author INT NOT NULL,
   title VARCHAR(50),
   content VARCHAR(100) NOT NULL,
   create_date DATE
 );
 
-ALTER TABLE article
-ADD CONSTRAINT FK_article
-FOREIGN KEY (author) REFERENCES user(id);
+CREATE TABLE article_user(
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  article_id INT NOT NULL
+);
+
+ALTER TABLE article_user
+ADD CONSTRAINT FK_article_id
+FOREIGN KEY (article_id) REFERENCES article(id);
+ALTER TABLE article_user
+ADD CONSTRAINT FK_user_id
+FOREIGN KEY (user_id) REFERENCES user(id);
 
 CREATE TABLE status (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -66,10 +74,11 @@ CREATE TABLE tag (
 
 CREATE TABLE article_tag (
   article INT NOT NULL,
-  tag INT NOT ALTER
+  tag INT NOT NULL,
+  status TINYINT NOT NULL
 );
 
-NULL TABLE article_tag
+ALTER TABLE article_tag
 ADD CONSTRAINT FK_article_tag_article
 FOREIGN KEY (article) REFERENCES article(id);
 
