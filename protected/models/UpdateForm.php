@@ -81,9 +81,11 @@ class UpdateForm extends CFormModel
     	//$currentUser->username=$this->username;
     	$this->currentUser->email=$this->email;
     	$pass=md5($this->password);
-    	if ($this->prevPassword != "" && $pass == $this->currentUser->password)
-    		return false;
-     	$this->currentUser->password=$pass;
+    	if ($this->prevPassword != "")
+    		if($pass == $this->currentUser->password)
+    			return false;
+     		else
+     			$this->currentUser->password=$pass;
     	$this->currentUser->tags->set($this->tags);
 	    if($this->currentUser->save())
 	    {
