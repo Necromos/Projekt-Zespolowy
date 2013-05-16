@@ -11,7 +11,6 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'List Articles', 'url'=>array('index')),
 	array('label'=>'Create Article', 'url'=>array('create')),
-	array('label'=>'View Article', 'url'=>array('view', 'id'=>$model->id)),
 	array('label'=>'Manage Article', 'url'=>array('admin')),
 );
 ?>

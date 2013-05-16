@@ -20,7 +20,7 @@
 	<div class="header">
         <div class="header_resize" >
     		<div class="logo">
-                <h1><small>Welcome to </small><?php echo CHtml::encode(Yii::app()->name); ?> <span>website</span></h1>
+                <h1><small>Welcome to </small><?php echo CHtml::encode(Yii::app()->name); ?> <span>journal</span></h1>
             </div>       
             <div class="search">
                 <form id="form1" name="form1" method="post" action="#">
@@ -41,26 +41,25 @@
 				array('label'=>'Register', 'url'=>array('/user/register'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Update Profile', 'url'=>array('/user/update'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Add Review', 'url'=>array('/review/create'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Article categories', 'url'=>array('/category/create'), 'visible'=>Yii::app()->user->name=="admin"),
 				array('label'=>'Login', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/user/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
             </div><!-- mainmenu -->
             <div class="clr"></div>
-        <!--<div class="headert_text_resize">
-            <div class="textarea">
-                <h2><strong>DO YOU NEED</strong> A NEW DESIGN?<br />
-                    ASKED US<span> HOW WE CAN DO IT!</span></h2>
-                    <p><span>Sed ut perspiciatis unde omnis iste natus error sit</span> voluptatem Doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Curabitur vel urna. In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero.</p>
-                    <a href="#"><img src="<?php echo Yii::app()->baseUrl; ?>/css/neutraldesk/images/view_ga.gif" alt="" width="206" height="47" border="0" /></a>
-            </div>
-            <img src="<?php echo Yii::app()->baseUrl; ?>/css/neutraldesk/images/img_main.jpg" alt="" />
-            <div class="clr"></div>
-        </div>-->
+        </div>
     </div>
 	
-
 	<?php echo $content; ?>
+    
+    <div class="headert_text_resize">
+   		<div class="textarea">
+        	<h2> Informatica is an international journal with its base in Europe.<small> It publishes peer-reviewed papers from <span>all areas of computer science</span>, <span>informatics</span> and <span>cognitive sciences</span>, with a focus on intelligent systems and software in general.</small></h2>     	
+        </div>
+        <img src="<?php echo Yii::app()->baseUrl; ?>/css/neutraldesk/images/img_main.jpg" alt="" />
+        <div class="clr"></div>
+    </div>
     <div class="fbg" >
         <div class="fbg_resize">
             <div class="blok">
@@ -71,9 +70,9 @@
             </div>
             <div class="blok">
                 <h2><span>Footer column 3</span></h2>
-                <div class="clr"></div>
+                <div></div>
                 <h2>Footer column 3.2</h2>
-                <div class="clr"></div>
+                <div></div>
             </div>    
             <div class="clr"></div>    
         </div>

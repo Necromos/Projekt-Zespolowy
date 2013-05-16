@@ -21,6 +21,7 @@ p.clr, .clr {
 	clear:both;
 	padding:0;
 	margin:0;
+	border-top: 2px dashed #666;
 }
 .main {
 	margin:0 auto;
@@ -427,3 +428,66 @@ p.response {
 	line-height:1.8em;
 	width:auto;
 }
+
+.row{
+	margin-bottom: 10px;
+}
+
+input[type="text"], input[type="password"], input[type="file"]{
+		box-shadow: 0px 0px 0px 4px #f2f5f7;
+		width: 290px;
+		height: 33px;
+
+		padding: 0 10px 0 10px;
+		margin-left: 25px;
+		color: #aeaeae;
+		border: 1px solid #bec2c4;
+	}
+	
+	input[type="text"]:focus, input[type="password"]:focus{
+		box-shadow: 0px 0px 0px 4px #e0f1fc;
+		border:1px solid #7dc6dd;
+		margin-left: 25px;
+	}
+	
+	input[type="checkbox"] ,input[type="submit"], select{
+		vertical-align: middle;
+		margin-left: 25px;
+	}
+	
+	
+	button {
+		background:url(../images/login.png) no-repeat;
+		width:82px;
+		height:32px;
+		border:0px;
+		float: right;
+		margin-right: 24px;
+	}
+	
+	button:hover {
+		background:url(../images/login_hover.png) no-repeat;
+		width:82px;
+		height:32px;
+		border:0px;
+	}
+	
+	button:active {
+		background:url(../images/login_active.png) no-repeat;
+		width:82px;
+		height:32px;
+		border:0px;
+	}	
+	
+	
+	label {
+		color: #900;
+		font-weight: bold;
+		display: block;
+		margin-left: 24px;
+		vertical-align: middle;
+	}
+	
+	label span {
+		font-size: 12px;
+	}

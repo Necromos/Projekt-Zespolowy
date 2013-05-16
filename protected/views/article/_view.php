@@ -1,6 +1,8 @@
 <?php
 /* @var $this ArticleController */
 /* @var $data Article */
+
+
 ?>
 
 <div class="view">
@@ -13,13 +15,17 @@
 	<?php echo CHtml::encode($data->author); ?>
 	<br />
     
+    <b><?php echo CHtml::encode($data->getAttributeLabel('users')); ?>:</b>
+	<?php echo CHtml::encode($data->users); ?>
+	<br />
+    
 	<b><?php echo CHtml::encode($data->getAttributeLabel('create_date')); ?>:</b>
 	<?php echo CHtml::encode($data->create_date); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('content')); ?>:</b>
 	<?php echo CHtml::encode($data->content); ?>
-	<br />
+	<br /><br/><hr /><br />
 
 
 </div>

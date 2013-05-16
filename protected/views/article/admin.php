@@ -4,12 +4,14 @@
 
 $this->breadcrumbs=array(
 	'Articles'=>array('index'),
+	$model->id,
 	'Manage',
 );
 
 $this->menu=array(
 	array('label'=>'List Articles', 'url'=>array('index')),
 	array('label'=>'Create Article', 'url'=>array('create')),
+	array('label'=>'Manage Articles', 'url'=>array('admin')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

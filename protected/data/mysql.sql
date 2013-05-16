@@ -25,12 +25,26 @@ CREATE TABLE user (
   register_date DATE
 );
 
+CREATE TABLE category (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL
+);
+
 CREATE TABLE article (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   title VARCHAR(50),
+  author INT NOT NULL,
   content VARCHAR(100) NOT NULL,
+  category INT,
   create_date DATE
 );
+
+ALTER TABLE article
+ADD CONSTRAINT FK_article_category
+FOREIGN KEY (category) REFERENCES category(id);
+ALTER TABLE article
+ADD CONSTRAINT FK_article_author
+FOREIGN KEY (author) REFERENCES user(id);
 
 CREATE TABLE article_user(
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

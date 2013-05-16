@@ -10,9 +10,7 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'List Articles', 'url'=>array('index')),
 	array('label'=>'Create Article', 'url'=>array('create')),
-	array('label'=>'Update Article', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Article', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Article', 'url'=>array('admin')),
+	array('label'=>'Manage Articles', 'url'=>array('admin')),
 );
 ?>
 
@@ -22,7 +20,9 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
+		'title',
 		'author',
+		'users',
 		'create_date',
 		'content',
 	),

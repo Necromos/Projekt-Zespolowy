@@ -24,7 +24,9 @@ class Article extends CActiveRecord
 	 * @return Article the static model class
 	 */
 	 
-	public $author;
+	public $users;
+	public $category;
+	private $_model;
 	
 	public static function model($className=__CLASS__)
 	{
@@ -48,23 +50,26 @@ class Article extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, content, author', 'required'),
-			array('author', 'type','type'=>'array','allowEmpty'=>false),
+			array('title, content, author, category', 'required'),
+			array('author, category',  'numerical', 'integerOnly'=>true),
+			array('users', 'type','type'=>'array','allowEmpty'=>false),
 			array('title', 'length', 'max'=>50),
 			array('content', 'file', 'types'=>'pdf, doc, docx'),
-			array('create_date', 'safe'),
+			array('create_date', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, content, create_date', 'safe', 'on'=>'search'),
+			array('id, author, title, content, category, create_date', 'safe', 'on'=>'search'),
 		);
 	}
 	
 	
 	public function afterSave(){
     	parent::afterSave();
-        User::updateUsers($this->author, $this->id);
+        User::updateUsers($this->users, $this->id);
     }
-		
+	
+	
+
 	/**
 	 * @return array relational rules.
 	 */
@@ -77,6 +82,7 @@ class Article extends CActiveRecord
 			'articleHistories' => array(self::HAS_MANY, 'ArticleHistory', 'article'),
 			'articleTags' => array(self::HAS_MANY, 'ArticleTag', 'article'),
 			'reviews' => array(self::HAS_MANY, 'Review', 'article'),
+			'category' => array(self::BELONGS_TO, 'Category', 'category(id)'),
 			//'project_id' => array(self::MANY_MANY, 'Project', 'project_user_assignment(user_id, project_id)')
 			'FK_article_id' => array(self::MANY_MANY, 'User', 'article_user(article_id, user_id)'),
 		);
@@ -86,13 +92,19 @@ class Article extends CActiveRecord
 	/**
 	 * @return array customized attribute labels (name=>label)
 	 */
+	 
 	public function attributeLabels()
 	{
+		
+		$user = User::model()->findByPk(Yii::app()->user->id);
+		
 		return array(
 			'id' => 'Id Article',
-			'author' => 'Author',
+			'author' => 'Author: ['.$user->username.']',
+			'users' => 'Optional authors',
 			'title' => 'Title',
 			'content' => 'Content',
+			'category' => 'Category',
 			'create_date' => 'Create Date',
 		);
 	}
@@ -111,10 +123,13 @@ class Article extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('title',$this->title,true);
-		$criteria->compare('content',$this->content,true);
-		$criteria->compare('create_date',$this->create_date,true);
-
+		$criteria->compare('title',$this->title);
+		$criteria->compare('author',$this->author);
+		$criteria->compare('content',$this->content);
+		$criteria->compare('category',$this->category);
+		$criteria->compare('create_date',$this->create_date);
+		
+		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
