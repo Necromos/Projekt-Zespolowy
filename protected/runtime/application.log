@@ -5520,3 +5520,380 @@ in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
 2013/05/14 20:38:10 [warning] [application] Failed to set unsafe attribute "content" of "Article".
 in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
 in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:14:51 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:14:51 [error] [php] Undefined variable: dane (C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php:31)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#1 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#2 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#3 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (31)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:15:29 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:15:30 [error] [php] Undefined offset: 1 (C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php:46)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#1 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#2 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#3 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (46)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:16:53 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:16:53 [error] [php] Undefined offset: 1 (C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php:44)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#1 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#2 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#3 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (44)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:17:19 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:24:59 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:24:59 [error] [php] move_uploaded_file(C:\wamp\www\Yii\Projekt-Zespolowy\uploads\articles\admin_13-05-16_11:24:59Wrzutka druga): failed to open stream: Invalid argument (C:\wamp\www\Yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#1 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#3 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#4 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#5 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (42)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:25:28 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:25:28 [error] [php] move_uploaded_file(C:\wamp\www\Yii\Projekt-Zespolowy\uploads\articles\admin_13-05-16_11:25:28Wrzutka druga): failed to open stream: Invalid argument (C:\wamp\www\Yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#1 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#3 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#4 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#5 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (42)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:25:51 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:25:51 [error] [php] Undefined offset: 2 (C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php:42)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#1 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#2 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#3 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (42)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:26:11 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:26:11 [error] [php] move_uploaded_file(C:\wamp\www\Yii\Projekt-Zespolowy\uploads\articles\admin_13-05-16_11:26:11pdf): failed to open stream: Invalid argument (C:\wamp\www\Yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#1 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#3 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#4 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#5 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (42)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:26:25 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:26:25 [error] [php] move_uploaded_file(C:\wamp\www\Yii\Projekt-Zespolowy\uploads\articles\admin_13-05-16_11:26:25.pdf): failed to open stream: Invalid argument (C:\wamp\www\Yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#1 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#3 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#4 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#5 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (42)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:26:57 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:26:57 [error] [php] move_uploaded_file(C:\wamp\www\Yii\Projekt-Zespolowy\uploads\articles\admin_13-05-16_11:26:57.): failed to open stream: Invalid argument (C:\wamp\www\Yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#1 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#3 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#4 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#5 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (42)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:27:02 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:27:02 [error] [php] move_uploaded_file(C:\wamp\www\Yii\Projekt-Zespolowy\uploads\articles\admin_13-05-16_11:27:02.): failed to open stream: Invalid argument (C:\wamp\www\Yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#1 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#3 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#4 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#5 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (42)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:27:14 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:27:15 [error] [php] move_uploaded_file(C:\wamp\www\Yii\Projekt-Zespolowy\uploads\articles\admin_13-05-16_11:27:15): failed to open stream: Invalid argument (C:\wamp\www\Yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#1 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#3 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#4 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#5 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (42)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:28:08 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:31:03 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:31:04 [error] [php] move_uploaded_file(C:\wamp\www\Yii\Projekt-Zespolowy\uploads\articles\admin_13-05-16_11:31:04..pdf): failed to open stream: Invalid argument (C:\wamp\www\Yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#1 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#3 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#4 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#5 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (42)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:31:17 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:31:17 [error] [php] move_uploaded_file(C:\wamp\www\Yii\Projekt-Zespolowy\uploads\articles\admin_13-05-16_11:31:17.pdf): failed to open stream: Invalid argument (C:\wamp\www\Yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#1 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#3 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#4 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#5 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (42)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:31:26 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:31:27 [error] [php] move_uploaded_file(C:\wamp\www\Yii\Projekt-Zespolowy\uploads\articles\admin_13-05-16_11:31:27.pdf): failed to open stream: Invalid argument (C:\wamp\www\Yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#1 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#3 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#4 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#5 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (42)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:31:49 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:31:50 [error] [php] move_uploaded_file(C:\wamp\www\Yii\Projekt-Zespolowy\uploads\articles\admin_13-05-16_11:31:50.pdf): failed to open stream: Invalid argument (C:\wamp\www\Yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#1 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#3 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#4 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#5 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (42)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:32:10 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:32:10 [error] [php] move_uploaded_file(C:\wamp\www\Yii\Projekt-Zespolowy\uploads\articles\admin_13-05-16_11:32:10.pdf): failed to open stream: Invalid argument (C:\wamp\www\Yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#1 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#3 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#4 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#5 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (42)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:34:26 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:34:26 [error] [php] move_uploaded_file(C:\wamp\www\Yii\Projekt-Zespolowy\uploads\articles\admin_13-05-16_11:34:26.pdf): failed to open stream: Invalid argument (C:\wamp\www\Yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#1 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#3 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#4 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#5 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (42)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:34:35 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:34:36 [error] [php] move_uploaded_file(C:\wamp\www\Yii\Projekt-Zespolowy\uploads\articles\admin_13-05-16_11:34:36.pdf): failed to open stream: Invalid argument (C:\wamp\www\Yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#1 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#3 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#4 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#5 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (42)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:34:45 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:34:46 [error] [php] move_uploaded_file(C:\wamp\www\Yii\Projekt-Zespolowy\uploads\articles\admin_13-05-16 11:34:46.pdf): failed to open stream: Invalid argument (C:\wamp\www\Yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#1 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#3 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#4 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#5 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (42)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:35:42 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:35:42 [error] [php] move_uploaded_file(C:\wamp\www\Yii\Projekt-Zespolowy\uploads\articles\admin_2013-05-16 11:35:42.pdf): failed to open stream: Invalid argument (C:\wamp\www\Yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#1 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#3 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#4 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#5 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#7 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (42)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:36:12 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 11:36:51 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (28)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/16 12:56:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logout".' in C:\wamp\www\Yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\CController.php(270): CController->missingAction('logout')
+#1 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): CController->run('logout')
+#2 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/logout')
+#3 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=site/logout
+HTTP_REFERER=http://localhost/Yii/Projekt-Zespolowy/index.php?r=article/create
+---
+2013/05/16 12:56:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logout".' in C:\wamp\www\Yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\CController.php(270): CController->missingAction('logout')
+#1 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): CController->run('logout')
+#2 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/logout')
+#3 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=site/logout
+HTTP_REFERER=http://localhost/Yii/Projekt-Zespolowy/index.php?r=article/create
+---
+2013/05/16 12:56:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\wamp\www\Yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=site/login
+HTTP_REFERER=http://localhost/Yii/Projekt-Zespolowy/index.php?r=site/index
+---
+2013/05/16 12:57:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\wamp\www\Yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=site/login
+---
+2013/05/16 12:58:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\wamp\www\Yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=site/login
+---

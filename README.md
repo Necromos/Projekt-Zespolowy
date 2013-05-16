@@ -30,3 +30,32 @@ Najprościej ujmując $model->tags->add/get/has/remove/reset/set("tagi po przeci
 ##"Autocomplete"
 http://www.yiiframework.com/wiki/361/simple-way-to-use-autocomplete-using-different-id-and-display-value/
 http://www.yiiframework.com/doc/api/1.1/CJuiAutoComplete
+
+##"Theme"
+Zaaplikowałem nowy layout dla strony. Znajduję się on w katalogu głównym aplikacji w folderach:
+~~~
+.
+|-- css
+|   `-- neutraldesk
+|       |-- images
+|       |   `-- (...)
+|       |-- js
+|       |   `-- (...)
+|       |-- readme-license-hotwebsitetemplates.txt
+|       `-- style.css
+|-- README.mkd
+|-- source
+|   `-- neutraldesk.zip
+`-- themes
+    `-- neutraldesk
+        `-- views
+            |-- layouts
+            |   |-- column1.php
+            |   |-- column2.php
+            |   `-- main.php
+            `-- site
+                |-- contact.php
+                |-- error.php
+                |-- login.php
+                `-- pages
+                    `-- about.php
