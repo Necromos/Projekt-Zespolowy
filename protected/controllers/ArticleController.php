@@ -26,10 +26,7 @@ class ArticleController extends Controller
         if(isset($_POST['Article']))
         {
             $model->attributes=$_POST['Article'];
-			
-			
-			
-			
+						
 			//$model->author = implode(",", $_POST['Article']['author']);
 			//$model->author = serialize($model->author);
 			
@@ -37,12 +34,12 @@ class ArticleController extends Controller
 
             if($model->save())
             {
-				
+				$extension = explode(".", $model->content);	
 				$rootPath = pathinfo(Yii::app()->request->scriptFile);
 				$user = $this->loadUser(Yii::app()->user->id);
 				$username = $user->username;
 				$random = rand(1,1000);
-				$model->content->saveAs( $rootPath['dirname'].'\uploads\articles\\'.$username.'_'.date('y-m-d').'_'.$random);
+				$model->content->saveAs( $rootPath['dirname'].'\uploads\articles\\'.$username.'_'.date('Y-m-d_H-i-s').'.'.$extension[1]);
                	$this->redirect(array('article/create'));
             }
         }
