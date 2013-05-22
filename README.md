@@ -13,7 +13,7 @@ htdocs->informatica->index.php etc etc
 		framework  ->yiic.php etc etc
 lub dłuższe zajęcie zmienić plik index.php tak by wskazywał na dobry folder
 
-* Uruchomić w bazie danych skrypty o nazwie ``mysql.sql`` oraz ``auth-schema-mysql.sql``
+* Uruchomić w bazie danych skrypty o nazwie ``mysql.sql`.
 
 ##"Rights"
 Aplikacja również korzysta z gotowego modułu "Rights" dzięki temu modułowi możemy łatwo i szybko zarządzać uprawnieniami użytkowników w naszej aplikacjii. Więcej informacji na temat tego modułu znajdziecie:
