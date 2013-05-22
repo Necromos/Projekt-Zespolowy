@@ -63,7 +63,6 @@ class UpdateForm extends CFormModel
 
 	public function submit()
 	{
-<<<<<<< .merge_file_a00904
     	//$currentUser->username=$this->username;
     	$this->currentUser->email=$this->email;
     	$pass=md5($this->password);
@@ -74,25 +73,6 @@ class UpdateForm extends CFormModel
      			$this->currentUser->password=$pass;
     	$this->currentUser->tags->set($this->tags);
 	    if($this->currentUser->save())
-=======
-    	$record = User::model()->findByPk(Yii::app()->user->id);
-    	//$record->username=$this->username;
-    	$record->email=$this->email;
-  //   	$pass=md5($this->password);
-  //   	if ($this->prevPassword != "" && $pass != $record->password)
-  //   		return false;
-  //   	$criteria = new CDbCriteria;
-		// $criteria->condition = 'email = "'.$this->email.'"';
-		// $models = User::model()->findAll($criteria);
-  //   	if (count($models)!=1)
-  //   		return false;
-  //   	$record->email = $this->email;
-  //   	$record->password=$pass;
-  //   	//$record->firstname=$this->firstName;
-  //   	//$record->lastname=$this->lastName;
-    	$record->tags->set((string)$this->tags);
-	    if($record->save())
->>>>>>> .merge_file_a05484
 	    {
 		   	return true;
 		}	
