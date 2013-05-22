@@ -24,8 +24,8 @@ class Article extends CActiveRecord
 	 * @return Article the static model class
 	 */
 	 
-	public $users;
-	public $category;
+	public $users = array();
+	public $category = array("id"=>1);
 	private $_model;
 	
 	public static function model($className=__CLASS__)

@@ -9108,3 +9108,110 @@ REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
 in C:\wamp\www\Yii\Projekt-Zespolowy\protected\models\Article.php (103)
 in C:\wamp\www\Yii\Projekt-Zespolowy\protected\views\article\_form.php (11)
 in C:\wamp\www\Yii\Projekt-Zespolowy\protected\views\article\create.php (23)
+2013/05/22 07:38:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "category/create".' in C:\wamp\www\Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('category/create')
+#1 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=category/create
+HTTP_REFERER=http://localhost/Yii/Projekt-Zespolowy/index.php?r=site/index
+---
+2013/05/22 07:54:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "category/create".' in C:\wamp\www\Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('category/create')
+#1 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=category/create
+HTTP_REFERER=http://localhost/Yii/Projekt-Zespolowy/index.php?r=user/update
+---
+2013/05/22 10:14:08 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (38)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/22 10:14:43 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (38)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/22 10:24:37 [error] [php] Trying to get property of non-object (C:\wamp\www\Yii\Projekt-Zespolowy\protected\models\Article.php:103)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\helpers\CHtml.php(1238): activeLabel()
+#1 C:\wamp\www\Yii\framework\web\widgets\CActiveForm.php(562): activeLabelEx()
+#2 C:\wamp\www\Yii\Projekt-Zespolowy\protected\views\article\_form.php(11): CActiveForm->labelEx()
+#3 C:\wamp\www\Yii\framework\web\CBaseController.php(126): require()
+#4 C:\wamp\www\Yii\framework\web\CBaseController.php(95): ArticleController->renderInternal()
+#5 C:\wamp\www\Yii\framework\web\CController.php(869): ArticleController->renderFile()
+#6 C:\wamp\www\Yii\Projekt-Zespolowy\protected\views\article\create.php(23): ArticleController->renderPartial()
+#7 C:\wamp\www\Yii\framework\web\CBaseController.php(126): require()
+#8 C:\wamp\www\Yii\framework\web\CBaseController.php(95): ArticleController->renderInternal()
+#9 C:\wamp\www\Yii\framework\web\CController.php(869): ArticleController->renderFile()
+#10 C:\wamp\www\Yii\framework\web\CController.php(782): ArticleController->renderPartial()
+#11 C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php(55): ArticleController->render()
+#12 C:\wamp\www\Yii\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#13 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#15 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#16 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#17 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\models\Article.php (103)
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\views\article\_form.php (11)
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\views\article\create.php (23)
+2013/05/22 10:30:18 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (38)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/22 10:30:18 [error] [php] implode(): Argument must be an array (C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php:40)
+Stack trace:
+#0 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\wamp\www\Yii\framework\web\CController.php(286): ArticleController->runAction()
+#2 C:\wamp\www\Yii\framework\web\CController.php(265): ArticleController->runActionWithFilters()
+#3 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): ArticleController->run()
+#4 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CWebApplication->run()
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (40)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/22 10:32:16 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (38)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/22 10:43:53 [error] [exception.CException] exception 'CException' with message 'Property "Article.users" is not defined.' in C:\wamp\www\Yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\Yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('users')
+#1 C:\wamp\www\Yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('users')
+#2 C:\wamp\www\Yii\framework\web\helpers\CHtml.php(1565): CHtml::resolveValue(Object(Article), 'users')
+#3 C:\wamp\www\Yii\framework\web\widgets\CActiveForm.php(763): CHtml::activeDropDownList(Object(Article), 'users', Array, Array)
+#4 C:\wamp\www\Yii\Projekt-Zespolowy\protected\views\article\_form.php(31): CActiveForm->dropDownList(Object(Article), 'users', Array, Array)
+#5 C:\wamp\www\Yii\framework\web\CBaseController.php(126): require('C:\wamp\www\Yii...')
+#6 C:\wamp\www\Yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Yii...', Array, true)
+#7 C:\wamp\www\Yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Yii...', Array, true)
+#8 C:\wamp\www\Yii\Projekt-Zespolowy\protected\views\article\create.php(23): CController->renderPartial('_form', Array)
+#9 C:\wamp\www\Yii\framework\web\CBaseController.php(126): require('C:\wamp\www\Yii...')
+#10 C:\wamp\www\Yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Yii...', Array, true)
+#11 C:\wamp\www\Yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Yii...', Array, true)
+#12 C:\wamp\www\Yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#13 C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php(55): CController->render('create', Array)
+#14 C:\wamp\www\Yii\framework\web\actions\CInlineAction.php(49): ArticleController->actionCreate()
+#15 C:\wamp\www\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\Yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\Yii\framework\web\CWebApplication.php(282): CController->run('create')
+#19 C:\wamp\www\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('article/create')
+#20 C:\wamp\www\Yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\wamp\www\Yii\Projekt-Zespolowy\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/create
+---
+2013/05/22 10:44:44 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (38)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/22 10:45:14 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (38)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/22 10:45:54 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (38)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+2013/05/22 10:46:05 [warning] [application] Failed to set unsafe attribute "content" of "Article".
+in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (38)
+in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
