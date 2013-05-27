@@ -22,8 +22,10 @@ return array(
 	),
 
 	'modules'=>array(
-		'rights'=>array( 
-			'install'=>true, // Enables the installer.
+		'rights'=>array(
+			'authenticatedName'=>'Author',
+			'appLayout'=>'webroot.themes.neutraldesk.views.layouts.main',
+			'install'=>false, // Enables the installer.
 		), 
 		
 		'gii'=>array(
