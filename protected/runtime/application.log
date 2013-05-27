@@ -9439,6 +9439,26 @@ Stack trace:
 REQUEST_URI=/Yii/Projekt-Zespolowy/index.php?r=article/index
 HTTP_REFERER=http://localhost/Yii/Projekt-Zespolowy/index.php?r=article/create
 ---
+<<<<<<< HEAD
+2013/05/27 12:33:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "category/create".' in C:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('category/create')
+#1 C:\wamp\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\Projekt-Zespolowy\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Projekt-Zespolowy/index.php?r=category/create
+HTTP_REFERER=http://localhost/Projekt-Zespolowy/index.php?r=article/create
+---
+2013/05/27 12:33:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "category/create".' in C:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('category/create')
+#1 C:\wamp\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\wamp\www\Projekt-Zespolowy\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Projekt-Zespolowy/index.php?r=category/create
+HTTP_REFERER=http://localhost/Projekt-Zespolowy/index.php?r=review/create
+---
+=======
 2013/05/27 11:37:57 [error] [exception.CException] exception 'CException' with message 'Property "Article.username" is not defined.' in C:\wamp\www\Yii\framework\base\CComponent.php:130
 Stack trace:
 #0 C:\wamp\www\Yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('username')
@@ -9599,3 +9619,4 @@ in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
 2013/05/27 12:19:24 [warning] [application] Failed to set unsafe attribute "content" of "Article".
 in C:\wamp\www\Yii\Projekt-Zespolowy\protected\controllers\ArticleController.php (39)
 in C:\wamp\www\Yii\Projekt-Zespolowy\index.php (13)
+>>>>>>> d3bc827f1964d89b7230ab5a5ff437aa53f18895

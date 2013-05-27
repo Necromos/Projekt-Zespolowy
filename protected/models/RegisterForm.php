@@ -58,7 +58,10 @@ class RegisterForm extends CFormModel
     	$record->tags->add((string)$this->tags);
 	    if($record->save())
 	    {
-	    	Rights::assign('Author', $record->id);
+	    	// Assign basic Author role to new users
+	    	$authenticatedName = Rights::module()->authenticatedName;
+	    	Rights::assign($authenticatedName, $record->id);
+
 	    	$identity = new UserIdentity($this->username,$this->password);
 	    	$identity->authenticate();
 	    	if($identity->errorCode===UserIdentity::ERROR_NONE)
