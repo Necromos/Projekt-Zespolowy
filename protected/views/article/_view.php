@@ -14,11 +14,7 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('author')); ?>:</b>
 	<?php echo CHtml::encode($data->author); ?>
 	<br />
-    
-    <b><?php echo CHtml::encode($data->getAttributeLabel('users')); ?>:</b>
-	<?php echo CHtml::encode($data->users); ?>
-	<br />
-    
+   
 	<b><?php echo CHtml::encode($data->getAttributeLabel('create_date')); ?>:</b>
 	<?php echo CHtml::encode($data->create_date); ?>
 	<br />
