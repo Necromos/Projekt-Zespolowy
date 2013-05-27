@@ -9,6 +9,7 @@ class RegisterForm extends CFormModel
 	public $password;
 	public $password2;
 	public $rememberMe;
+	public $beReviewer;
 	public $tags;
 
 	private $_identity;
@@ -29,6 +30,7 @@ class RegisterForm extends CFormModel
 			array('email','unique', 'className' => 'User'),
 			array('password2', 'compare', 'compareAttribute'=>'password'),
 			array('rememberMe', 'boolean'),
+			array('beReviewer', 'boolean'),
 		);
 	}
 
@@ -42,6 +44,7 @@ class RegisterForm extends CFormModel
 			'lastName' => 'Last Name',
 			'password2' => 'Confirm password',
 			'rememberMe'=>'Remember me next time',
+			'beReviewer' => 'Do you want to become a reviewer?',
 		);
 	}
 
@@ -56,8 +59,13 @@ class RegisterForm extends CFormModel
     	$record->lastname=$this->lastName;
     	$record->register_date=date('Y-m-d');
     	$record->tags->add((string)$this->tags);
+
 	    if($record->save())
 	    {
+	    	if ($this->beReviewer)
+	    	{
+	    		Rights::assign("Reviewer", $record->id);
+	    	}
 	    	// Assign basic Author role to new users
 	    	$authenticatedName = Rights::module()->authenticatedName;
 	    	Rights::assign($authenticatedName, $record->id);

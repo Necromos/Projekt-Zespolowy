@@ -74,6 +74,12 @@ $this->breadcrumbs=array(
 		<?php echo $form->error($model,'rememberMe'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->checkBox($model,'beReviewer'); ?>
+		<?php echo $form->label($model,'beReviewer'); ?>
+		<?php echo $form->error($model,'beReviewer'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Register'); ?>
 	</div>
