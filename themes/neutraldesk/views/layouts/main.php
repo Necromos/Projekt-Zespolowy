@@ -35,13 +35,14 @@
                 <?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Article', 'url'=>array('/article/create'), 'visible'=>!Yii::app()->user->isGuest),
 				//array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Register', 'url'=>array('/user/register'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Update Profile', 'url'=>array('/user/update'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Add Review', 'url'=>array('/review/create'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Article categories', 'url'=>array('/category/create'), 'visible'=>Yii::app()->user->name=="admin"),
+                array('label'=>'Article categories', 'url'=>array('/category/create'), 'visible'=>Yii::app()->user->checkAccess('Admin')),
+				array('label'=>'Admin Panel', 'url'=>array('/admin/index'), 'visible'=>Yii::app()->user->checkAccess('Admin')),
 				array('label'=>'Login', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/user/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
