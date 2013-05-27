@@ -1,11 +1,15 @@
 ﻿<?php
-class ArticleController extends Controller
+class ArticleController extends RController
 {
 	
 	private $_model;
 	
 	public $layout='//layouts/column2';
 	
+	public function filters() 
+	{ 
+		return array('rights'); 
+	}
 		
 	protected function loadUser($id=null)
     {
@@ -109,6 +113,25 @@ class ArticleController extends Controller
 		$this->render('admin',array(
 			'model'=>$model,
 		));
+	}
+
+	public function actionApprovestatus()
+	{
+		$id = Yii::app()->getRequest()->getQuery('id');
+		$article = Article::model()->findByPk($id);
+		$article->status = 1;
+		$article->save(false);
+		
+		$this->redirect(array("editormain/unpublished"));
+	}
+
+	public function actionDisapprovestatus()
+	{
+		$id = Yii::app()->getRequest()->getQuery('id');
+		$article = Article::model()->findByPk($id);
+		$article->delete();
+		
+		$this->redirect(array("editormain/unpublished"));
 	}
 
 	/**

@@ -17,6 +17,7 @@ CREATE TABLE IF NOT EXISTS `article` (
   `content` varchar(100) NOT NULL,
   `category` int(11) DEFAULT NULL,
   `create_date` date DEFAULT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `FK_article_category` (`category`),
   KEY `FK_article_author` (`author`)
@@ -114,6 +115,15 @@ INSERT INTO `authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES
 ('Guest', 2, NULL, NULL, 'N;'),
 ('Reviewer', 2, 'A person who reviews the articles.', NULL, 'N;'),
 ('EditorMain', 2, 'Supervisor of all the editors.', NULL, 'N;');
+('Manage own articles', 1, 'Every author can manage own articles.', NULL, 'N;'),
+('Approve/Disapprove article', 1, 'Main editor can approve or disapprove articles.', NULL, 'N;'),
+('Article.Admin', 0, NULL, NULL, 'N;'),
+('Article.Approvestatus', 0, NULL, NULL, 'N;'),
+('Article.Create', 0, NULL, NULL, 'N;'),
+('Article.Disapprovestatus', 0, NULL, NULL, 'N;'),
+('Article.Index', 0, NULL, NULL, 'N;'),
+('Article.Update', 0, NULL, NULL, 'N;'),
+('Article.View', 0, NULL, NULL, 'N;'),
 
 -- --------------------------------------------------------
 
@@ -127,6 +137,21 @@ CREATE TABLE IF NOT EXISTS `authitemchild` (
   PRIMARY KEY (`parent`,`child`),
   KEY `child` (`child`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Zrzut danych tabeli `authitemchild`
+--
+
+INSERT INTO `authitemchild` (`parent`, `child`) VALUES
+('EditorMain', 'Approve/Disapprove article'),
+('Manage own articles', 'Article.Admin'),
+('Approve/Disapprove article', 'Article.Approvestatus'),
+('Manage own articles', 'Article.Create'),
+('Approve/Disapprove article', 'Article.Disapprovestatus'),
+('Manage own articles', 'Article.Index'),
+('Manage own articles', 'Article.Update'),
+('Manage own articles', 'Article.View'),
+('Author', 'Manage own articles');
 
 -- --------------------------------------------------------
 

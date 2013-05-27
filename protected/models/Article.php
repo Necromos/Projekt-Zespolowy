@@ -9,6 +9,7 @@
  * @property string $title
  * @property string $content
  * @property string $create_date
+ * @property string $status
  *
  * The followings are the available model relations:
  * @property User $author0
@@ -106,6 +107,7 @@ class Article extends CActiveRecord
 			'content' => 'Content',
 			'category' => 'Category',
 			'create_date' => 'Create Date',
+			'status' => 'Approval status',
 		);
 	}
 	
@@ -126,6 +128,7 @@ class Article extends CActiveRecord
 		$criteria->compare('content',$this->content);
 		$criteria->compare('category',$this->category);
 		$criteria->compare('create_date',$this->create_date);
+		$criteria->compare('status',$this->status);
 		
 		
 		return new CActiveDataProvider($this, array(

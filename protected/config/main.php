@@ -95,6 +95,14 @@ return array(
 				*/
 			),
 		),
+
+		'urlManager'=>array(
+			'urlFormat'=>'path',
+			'rules'=>array(
+				'article/approvestatus/<id>'=>'article/approvestatus',
+				'article/disapprovestatus/<id>'=>'article/disapprovestatus',
+			),
+		),
 	),
 
 	'homeUrl'=>array('site/index'),
