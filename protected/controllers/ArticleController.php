@@ -30,7 +30,8 @@ class ArticleController extends Controller
     {
 		$article = Article::model()->findAll();
         $users = User::model()->findAll();
-        
+        //$author = User::model()->findByPk(Yii::app()->user->id);
+		$author = $this->loadUser(Yii::app()->user->id);
 		$model=new Article;
 		$this->performAjaxValidation($model);
         if(isset($_POST['Article']))
@@ -39,14 +40,12 @@ class ArticleController extends Controller
 			$model->content=CUploadedFile::getInstance($model,'content');
 			$model->category = implode($model->category);
 			$model->create_date = date('Y-m-d_H-i-s');
+			$model->author = $author->id;
             if($model->save())
             {
-				
 				$extension = explode(".", $model->content);	
 				$rootPath = pathinfo(Yii::app()->request->scriptFile);
-				$user = $this->loadUser(Yii::app()->user->id);
-				$model->author = $user;
-				$username = $user->username;
+				$username = $author->username;
 				$date = date('Y-m-d_H-i-s');
 				$model->content->saveAs( $rootPath['dirname'].'\uploads\articles\\'.$username.'_'.$date.'.'.$extension[1]);
                	$this->redirect(array('article/create'));
@@ -58,7 +57,7 @@ class ArticleController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+		$author = $this->loadUser(Yii::app()->user->id);
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -68,11 +67,9 @@ class ArticleController extends Controller
 			$model->content=CUploadedFile::getInstance($model,'content');
 			$model->category = implode($model->category);
 			$model->create_date = date('Y-m-d_H-i-s');
-			
+			$model->author = $author->id;
 			if($model->save()){
 				$rootPath = pathinfo(Yii::app()->request->scriptFile);
-				$user = $this->loadUser(Yii::app()->user->id);
-				$model->author = $user;
 				$file_name = Yii::app()->db->createCommand()
 				->select('content')
     			->from('article')
