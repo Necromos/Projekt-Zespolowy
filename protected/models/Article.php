@@ -64,11 +64,20 @@ class Article extends CActiveRecord
 		);
 	}
 
+	public function beforeSave(){
+		if(parent::beforeSave()){
+			$this->tags->add((string)$this->tagList);
+			return true;	
+		}
+		return false;
+	}
+
 	public function afterSave(){
-    	parent::afterSave();
-        User::updateUsers($this->users, $this->id);
-        $art = Article::model()->findByPk($this->id);
-        $art->tags->add((string)$this->tagList);
+    	if(parent::afterSave()){
+    		User::updateUsers($this->users, $this->id);
+    		return true;
+    	}
+        return false;
     }
 	
 	
