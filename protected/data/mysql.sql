@@ -114,7 +114,7 @@ INSERT INTO `authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES
 ('Author', 2, 'Every authenticated user is an author', NULL, 'N;'),
 ('Guest', 2, NULL, NULL, 'N;'),
 ('Reviewer', 2, 'A person who reviews the articles.', NULL, 'N;'),
-('EditorMain', 2, 'Supervisor of all the editors.', NULL, 'N;');
+('EditorMain', 2, 'Supervisor of all the editors.', NULL, 'N;'),
 ('Manage own articles', 1, 'Every author can manage own articles.', NULL, 'N;'),
 ('Approve/Disapprove article', 1, 'Main editor can approve or disapprove articles.', NULL, 'N;'),
 ('Article.Admin', 0, NULL, NULL, 'N;'),
@@ -123,7 +123,7 @@ INSERT INTO `authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES
 ('Article.Disapprovestatus', 0, NULL, NULL, 'N;'),
 ('Article.Index', 0, NULL, NULL, 'N;'),
 ('Article.Update', 0, NULL, NULL, 'N;'),
-('Article.View', 0, NULL, NULL, 'N;'),
+('Article.View', 0, NULL, NULL, 'N;');
 
 -- --------------------------------------------------------
 
