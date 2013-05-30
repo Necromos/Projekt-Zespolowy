@@ -6,7 +6,7 @@
 ##Ad hoc pytania ``Dlaczego nie działa mi strona?``
 Prosta odpowiedź, lokalizacja frameworka, z racji tego, że tworzyłem to w htdocs xamppa a jak wiemy nie da się mieć wszystkiego w 1 folderze to stworzyłem subfoldery tak więc aby uruchomić stronę trzeba zrobić kilka kroków:
 
-* Stworzyć baze danych, ładując plik z protected/data/mysql.sql, dla konta root
+* Importować skrypt mysql.sql, dla konta root nie będąc w żadnej bazie danych. (Sprawdź czy poprawnie dodała się baza danych o nazwie "informatica"). 
 * Sprawdzić czy folder z frameworkiem jest na poziomie dostępu do strony tj: trzymać stronę w folderze który jako brata ma folder zawierający framework.
 Przykład:
 htdocs->informatica->index.php etc etc
