@@ -36,6 +36,11 @@
 	<?php echo $form->fileField($model,'content'); ?>
 	<?php echo $form->error($model,'content'); ?>
 </div>
+<div class="row">
+    <?php echo $form->labelEx($model,'tagList'); ?>
+    <?php echo $form->textArea($model,'tagList'); ?>
+    <?php echo $form->error($model,'tagList'); ?>
+  </div>
 <div class="row buttons">
 		<?php echo CHtml::submitButton('Article'); ?>
 </div>

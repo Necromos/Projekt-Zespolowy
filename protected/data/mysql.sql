@@ -49,7 +49,6 @@ CREATE TABLE IF NOT EXISTS `article_history` (
 CREATE TABLE IF NOT EXISTS `article_tag` (
   `article` int(11) NOT NULL,
   `tag` int(11) NOT NULL,
-  `status` tinyint(4) NOT NULL,
   KEY `FK_article_tag_article` (`article`),
   KEY `FK_article_tag_tag` (`tag`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -123,7 +122,7 @@ INSERT INTO `authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES
 ('Article.Disapprovestatus', 0, NULL, NULL, 'N;'),
 ('Article.Index', 0, NULL, NULL, 'N;'),
 ('Article.Update', 0, NULL, NULL, 'N;'),
-('Article.View', 0, NULL, NULL, 'N;'),
+('Article.View', 0, NULL, NULL, 'N;');
 
 -- --------------------------------------------------------
 

@@ -27,6 +27,7 @@ class Article extends CActiveRecord
 	 
 	public $users = array();
 	public $category = array("id"=>1);
+	public $tagList = '';
 	private $_model;
 	
 	public static function model($className=__CLASS__)
@@ -51,7 +52,7 @@ class Article extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, content, author, category', 'required'),
+			array('title, content, author, category, tagList', 'required'),
 			array('author, category',  'numerical', 'integerOnly'=>true),
 			array('users', 'type','type'=>'array','allowEmpty'=>false),
 			array('title', 'length', 'max'=>50),
@@ -62,11 +63,12 @@ class Article extends CActiveRecord
 			array('id, author, title, content, category, create_date', 'safe', 'on'=>'search'),
 		);
 	}
-	
-	
+
 	public function afterSave(){
     	parent::afterSave();
         User::updateUsers($this->users, $this->id);
+        $art = Article::model()->findByPk($this->id);
+        $art->tags->add((string)$this->tagList);
     }
 	
 	
@@ -108,6 +110,7 @@ class Article extends CActiveRecord
 			'category' => 'Category',
 			'create_date' => 'Create Date',
 			'status' => 'Approval status',
+			'tagList' => 'Article tags',
 		);
 	}
 	
@@ -135,4 +138,30 @@ class Article extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	public function behaviors() {
+        return array(
+            'tags' => array(
+                'class' => 'ext.Su_MpaK.Taggable.behaviours.TaggableBehaviour',
+ 
+                // Tag model path alias.
+                'tagModel' => 'Tag',
+ 
+                // The field name which contains tag title.
+                'tagTableTitle' => 'name',
+ 
+                // The name of relation table.
+                'tagRelationTable' => 'article_tag',
+ 
+                // The name of attribute in relation table which recalls tag.
+                'tagRelationTableTagFk' => 'tag',
+ 
+                // The name of attribute in relation table which recalls model.
+                'tagRelationTableModelFk' => 'article',
+ 
+                // Separator for tags in strings.
+                'tagsSeparator' => ','
+            )
+        );
+    }
 }
