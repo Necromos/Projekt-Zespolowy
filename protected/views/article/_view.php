@@ -12,7 +12,9 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('author')); ?>:</b>
-	<?php echo CHtml::encode($data->author); ?>
+	<?php 
+	$username = User::model()->findByPk($data->author);
+	echo CHtml::encode($username->username); ?>
 	<br />
    
 	<b><?php echo CHtml::encode($data->getAttributeLabel('create_date')); ?>:</b>
