@@ -112,7 +112,7 @@ class Article extends CActiveRecord
 		
 		return array(
 			'id' => 'Id Article',
-			'author' => 'Author: ['.$user->username.']',
+			'author' => 'Author',
 			'users' => 'Optional authors',
 			'title' => 'Title',
 			'content' => 'Content',
