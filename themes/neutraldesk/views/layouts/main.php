@@ -22,14 +22,6 @@
     		<div class="logo">
                 <h1><small>Welcome to </small><?php echo CHtml::encode(Yii::app()->name); ?> <span>journal</span></h1>
             </div>       
-            <div class="search">
-                <form id="form1" name="form1" method="post" action="#">
-                    <span>
-                        <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." />
-                    </span>
-                    <input name="b" type="image" src="<?php echo Yii::app()->request->baseUrl; ?>/css/neutraldesk/images/search.gif" class="button" />
-                </form>
-            </div>
             <div class="clr"></div>
             <div class="menu">
                 <?php $this->widget('zii.widgets.CMenu',array(
@@ -41,7 +33,7 @@
 				array('label'=>'Register', 'url'=>array('/user/register'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Update Profile', 'url'=>array('/user/update'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Add Review', 'url'=>array('/review/create'), 'visible'=>!Yii::app()->user->isGuest),
-                array('label'=>'Article categories', 'url'=>array('/category/create'), 'visible'=>Yii::app()->user->checkAccess('Admin')),
+                array('label'=>'Categories', 'url'=>array('/category/create'), 'visible'=>Yii::app()->user->checkAccess('Admin')),
                 array('label'=>'Editor Main Panel', 'url'=>array('/editormain/index'), 'visible'=>Yii::app()->user->checkAccess('EditorMain')),
 				array('label'=>'Admin Panel', 'url'=>array('/admin/index'), 'visible'=>Yii::app()->user->checkAccess('Admin')),
 				array('label'=>'Login', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
@@ -61,24 +53,7 @@
         </div>
         <img src="<?php echo Yii::app()->baseUrl; ?>/css/neutraldesk/images/img_main.jpg" alt="" />
         <div class="clr"></div>
-    </div>
-    <div class="fbg" >
-        <div class="fbg_resize">
-            <div class="blok">
-                <h2><span>Footer column 1</span></h2>
-            </div>    
-            <div class="blok">
-                <h2><span>Footer column 2</span></h2>
-            </div>
-            <div class="blok">
-                <h2><span>Footer column 3</span></h2>
-                <div></div>
-                <h2>Footer column 3.2</h2>
-                <div></div>
-            </div>    
-            <div class="clr"></div>    
-        </div>
-    </div>    
+    </div> 
     <div class="footer">
         <div class="footer-resize">
             <p class="lf" >Copyright &copy; <?php echo date('Y'); ?> by Necromos Team.</p>

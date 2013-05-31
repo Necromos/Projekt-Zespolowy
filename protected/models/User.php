@@ -67,7 +67,7 @@ class User extends CActiveRecord
 			array('register_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, username, password, firstname, lastname, email, register_date', 'safe', 'on'=>'search'),
+			array('id, username, firstname, lastname, email, register_date', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -114,7 +114,6 @@ class User extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('username',$this->username,true);
-		$criteria->compare('password',$this->password,true);
 		$criteria->compare('firstname',$this->firstname,true);
 		$criteria->compare('lastname',$this->lastname,true);
 		$criteria->compare('email',$this->email,true);

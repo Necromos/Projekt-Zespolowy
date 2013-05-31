@@ -1,1 +1,0 @@
-#Tutaj wrzucamy tylko widoki jeszcze bez funkcjonalności, oczywiście musimy czekać na info od dr Ghanzy :/

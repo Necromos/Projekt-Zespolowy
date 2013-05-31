@@ -58,7 +58,8 @@ class RegisterForm extends CFormModel
     	$record->firstname=$this->firstName;
     	$record->lastname=$this->lastName;
     	$record->register_date=date('Y-m-d');
-    	$record->tags->add((string)$this->tags);
+    	if ($this->beReviewer)
+    		$record->tags->add((string)$this->tags);
 
 	    if($record->save())
 	    {
