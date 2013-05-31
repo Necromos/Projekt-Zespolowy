@@ -22,7 +22,7 @@ class RegisterForm extends CFormModel
 	public function rules()
 	{
 		return array(
-			array('username, email, firstName, lastName, password, password2, tags', 'required'),
+			array('username, email, firstName, lastName, password, password2', 'required'),
 			array('email','email'),
 			array('username', 'length', 'min'=>3, 'max'=>12),
 			array('password, password2', 'length', 'min'=>8, 'max'=>16),
@@ -31,8 +31,25 @@ class RegisterForm extends CFormModel
 			array('password2', 'compare', 'compareAttribute'=>'password'),
 			array('rememberMe', 'boolean'),
 			array('beReviewer', 'boolean'),
+			array('tags', 'checkReviewer'),
 		);
 	}
+
+	public function checkReviewer($attribute,$params)
+    {
+    	if($this->beReviewer){
+    		$str = trim($this->tags);
+	    	if ($str=="") {
+	    		$this->addError('tags', 'Tags cannot be null.');
+	    		return false;
+	    	}
+	    	elseif(substr($str, -1)==","){
+	    		$this->addError('tags', 'Tags cannot end with ","');
+	    		return false;	
+	    	}
+	    }
+    	return true;
+    }
 
 	/**
 	 * Declares attribute labels.
