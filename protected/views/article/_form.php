@@ -42,7 +42,7 @@
     <?php echo $form->error($model,'tagList'); ?>
   </div>
 <div class="row buttons">
-		<?php echo CHtml::submitButton('Article'); ?>
+		<?php echo CHtml::submitButton('Submit Article'); ?>
 </div>
 
 

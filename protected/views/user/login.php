@@ -19,7 +19,7 @@ $this->breadcrumbs=array(
 	'enableAjaxValidation'=>true,
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
-		'validateOnType'=>true,
+		'validateOnType'=>false,
 		'validateOnSubmit'=>true,
 	),
 )); ?>

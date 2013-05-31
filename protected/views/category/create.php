@@ -1,84 +1,49 @@
-﻿<?php
+<?php
+/* @var $this SiteController */
+/* @var $model LoginForm */
+/* @var $form CActiveForm  */
 
-class Category extends CActiveRecord
-{
-	/**
-	 * Returns the static model of the specified AR class.
-	 * @param string $className active record class name.
-	 * @return Article the static model class
-	 */
-	 
-	
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
-	}
-	
+$this->pageTitle=Yii::app()->name . ' - Category creation';
+$this->breadcrumbs=array(
+	'Create category',
+);
+?>
 
-	/**
-	 * @return string the associated database table name
-	 */
-	public function tableName()
-	{
-		return 'category';
-	}
+<h1>Create Category</h1>
 
-	/**
-	 * @return array validation rules for model attributes.
-	 */
-	public function rules()
-	{
-		// NOTE: you should only define rules for those attributes that
-		// will receive user inputs.
-		return array(
-			array('name', 'required'),
-			array('name', 'length', 'max'=>100),
-			array('id, name', 'safe', 'on'=>'search'),
-		);
-	}
-	
-	/**
-	 * @return array relational rules.
-	 */
-	public function relations()
-	{
-		// NOTE: you may need to adjust the relation name and the related
-		// class name for the relations automatically generated below.
-		return array(
-			'id' => array(self::HAS_MANY, 'Article', 'article(id)'),
-		);
-	}
-	
+<?php if(Yii::app()->user->hasFlash('cc')): ?>
 
-	/**
-	 * @return array customized attribute labels (name=>label)
-	 */
-	public function attributeLabels()
-	{
-		return array(
-			'id' => 'Id Category',
-			'name' => 'Category',
-		);
-	}
-	
-	
+<div class="flash-success">
+	<?php echo Yii::app()->user->getFlash('cc'); ?>
+</div>
 
-	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
-	 */
-	public function search()
-	{
-		// Warning: Please modify the following code to remove attributes that
-		// should not be searched.
+<?php else: ?>
 
-		$criteria=new CDbCriteria;
+<p>Please add name of category:</p>
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-		
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
-	}
-}
+<div class="form">
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'id'=>'category-form',
+	'enableAjaxValidation'=>true,
+	'enableClientValidation'=>true,
+	'clientOptions'=>array(
+		'validateOnType'=>true,
+		'validateOnSubmit'=>true,
+	),
+)); ?>
+
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'name'); ?>
+		<?php echo $form->textField($model,'name'); ?>
+		<?php echo $form->error($model,'name'); ?>
+	</div>
+
+	<div class="row buttons">
+		<?php echo CHtml::submitButton('Create'); ?>
+	</div>
+
+<?php $this->endWidget(); ?>
+</div><!-- form -->
+<?php endif; ?>
