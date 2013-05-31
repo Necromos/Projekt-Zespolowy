@@ -19,8 +19,16 @@ class UpdateForm extends CFormModel
 		$tmp = $this->currentUser->tags->get();
 		$tmp = $tmp->toArray();
 		$res = "";
+		$i = 0;
+		$n = count($tmp);
 		foreach ($tmp as &$value) {
-		    $res = $res.$value->name.",";
+		    if ($i != $n-1){
+		    	$res = $res.$value->name.",";
+		    	$i++;
+		    }
+		    else {
+		    	$res = $res.$value->name;
+		    }
 		}
 		$this->tags = $res;
 	}
@@ -50,9 +58,15 @@ class UpdateForm extends CFormModel
 
     public function checkIfNull($attribute,$params)
     {
-    	if (trim($this->tags)=="") {
+    	//TU NALEŻY DODAĆ SPRAWDZANIE CZY JEST TAKŻE RECENZENTEM!!!!
+    	$str = trim($this->tags);
+    	if ($str=="") {
     		$this->addError('tags', 'Tags cannot be null.');
     		return false;
+    	}
+    	elseif(substr($str, -1)==","){
+    		$this->addError('tags', 'Tags cannot end with ","');
+    		return false;	
     	}
     	return true;
     }
@@ -74,7 +88,7 @@ class UpdateForm extends CFormModel
     			return false;
      		else
      			$this->currentUser->password=$pass;
-    	$this->currentUser->tags->set($this->tags);
+    	$this->currentUser->tags->set(trim($this->tags));
 	    if($this->currentUser->save())
 	    {
 		   	return true;
