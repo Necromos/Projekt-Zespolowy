@@ -23,6 +23,15 @@
                 <h1><small>Welcome to </small><?php echo CHtml::encode(Yii::app()->name); ?> <span>journal</span></h1>
             </div>       
             <div class="clr"></div>
+            <div class="logout" > <?php 
+				$this->widget('zii.widgets.CMenu',array(
+					'items'=>array(
+						array('label'=>'Login', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
+						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/user/logout'), 'visible'=>!Yii::app()->user->isGuest)
+					),
+				));
+			?>
+            </div>
             <div class="menu">
                 <?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
@@ -36,8 +45,8 @@
                 array('label'=>'Categories', 'url'=>array('/category/create'), 'visible'=>Yii::app()->user->checkAccess('Admin')),
                 array('label'=>'Editor Main Panel', 'url'=>array('/editormain/index'), 'visible'=>Yii::app()->user->checkAccess('EditorMain')),
 				array('label'=>'Admin Panel', 'url'=>array('/admin/index'), 'visible'=>Yii::app()->user->checkAccess('Admin')),
-				array('label'=>'Login', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/user/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				//array('label'=>'Login', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
+				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/user/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
             </div><!-- mainmenu -->
