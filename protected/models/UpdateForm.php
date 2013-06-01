@@ -58,7 +58,7 @@ class UpdateForm extends CFormModel
 
     public function checkIfNull($attribute,$params)
     {
-    	//TU NALEŻY DODAĆ SPRAWDZANIE CZY JEST TAKŻE RECENZENTEM!!!!
+     if (Yii::app()->user->checkAccess('Reviewer')){  //TU NALEŻY DODAĆ SPRAWDZANIE CZY JEST TAKŻE RECENZENTEM!!!!
     	$str = trim($this->tags);
     	if ($str=="") {
     		$this->addError('tags', 'Tags cannot be null.');
@@ -69,6 +69,10 @@ class UpdateForm extends CFormModel
     		return false;	
     	}
     	return true;
+     }
+      else { 
+     	return true;
+     }
     }
 	public function attributeLabels()
 	{
@@ -88,7 +92,10 @@ class UpdateForm extends CFormModel
     			return false;
      		else
      			$this->currentUser->password=$pass;
+     if (Yii::app()->user->checkAccess('Reviewer')){
     	$this->currentUser->tags->set(trim($this->tags));
+    }
+    else{return true;}
 	    if($this->currentUser->save())
 	    {
 		   	return true;
