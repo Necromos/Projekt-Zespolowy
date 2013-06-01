@@ -23,14 +23,20 @@
                 <h1><small>Welcome to </small><?php echo CHtml::encode(Yii::app()->name); ?> <span>journal</span></h1>
             </div>       
             <div class="clr"></div>
-            <div class="logout" > <?php 
+            <div class="logout" > 
+            <?php 
 				$this->widget('zii.widgets.CMenu',array(
 					'items'=>array(
 						array('label'=>'Login', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
 						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/user/logout'), 'visible'=>!Yii::app()->user->isGuest)
 					),
 				));
-			?>
+                    if (Yii::app()->user->getId() !== null) {
+                         echo "Status:  " ;
+                    $roles=Rights::getAssignedRoles(Yii::app()->user->Id);
+                    foreach($roles as $role)
+                    echo $role->name.",<br />"; 
+                } ?>
             </div>
             <div class="menu">
                 <?php $this->widget('zii.widgets.CMenu',array(
@@ -43,6 +49,7 @@
 				array('label'=>'Update Profile', 'url'=>array('/user/update'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Add Review', 'url'=>array('/review/create'), 'visible'=>!Yii::app()->user->isGuest),
                 array('label'=>'Categories', 'url'=>array('/category/create'), 'visible'=>Yii::app()->user->checkAccess('Admin')),
+                array('label'=>'Section Editor Panel', 'url'=>array('/sectioneditor/index'), 'visible'=>Yii::app()->user->checkAccess('SectionEditor')),
                 array('label'=>'Editor Main Panel', 'url'=>array('/editormain/index'), 'visible'=>Yii::app()->user->checkAccess('EditorMain')),
 				array('label'=>'Admin Panel', 'url'=>array('/admin/index'), 'visible'=>Yii::app()->user->checkAccess('Admin')),
 				//array('label'=>'Login', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
