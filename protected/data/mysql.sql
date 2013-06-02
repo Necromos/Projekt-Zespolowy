@@ -113,6 +113,7 @@ INSERT INTO `authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES
 ('Author', 2, 'Every authenticated user is an author', NULL, 'N;'),
 ('Guest', 2, NULL, NULL, 'N;'),
 ('Reviewer', 2, 'A person who reviews the articles.', NULL, 'N;'),
+('Editor', 2, 'Employee editor', NULL, 'N;'),
 ('EditorMain', 2, 'Supervisor of all the editors.', NULL, 'N;'),
 ('SectionEditor', 2, 'Head of all the editors.', NULL, 'N;'),
 ('Manage own articles', 1, 'Every author can manage own articles.', NULL, 'N;'),
